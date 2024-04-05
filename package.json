@@ -1,0 +1,11 @@
+{
+  "name": "bw_billing_tracker",
+  "version": "1.0.0",
+  "description": "Track BW billing for projects whenever a partition is created, deletd, upgraded or downgraded.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Deependra Singh",
+  "license": "ISC"
+}
