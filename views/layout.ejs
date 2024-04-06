@@ -18,9 +18,13 @@
 
   </head>
   <body>
-    <%- include('navbar'); %>
 
+    <%- include('navbar'); %>
+    <% if(!userName) { %>
     <%- include('login'); %>
+    <% }else{ %>
+    <%- include('bandwidth_table'); %>
+    <% } %>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
