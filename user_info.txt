@@ -1,0 +1,1 @@
+{"user":"testuser","password":"$2b$12$rddd.KEoJv5wyyLbmfdJXerraDb117uzIltMcHzbYDGFeLajm0CDe"}
