@@ -2,7 +2,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import cookieParser from 'cookie-parser';
 import userRouter from './features/users/user.route.js';
-import jwtAuth from './middleares/jwt.middleware.js';
+import jwtAuth from './middlewares/jwt.middleware.js';
 
 // 2. Create Server
 const server = express();
