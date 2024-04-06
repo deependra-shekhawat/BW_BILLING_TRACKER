@@ -30,7 +30,7 @@ class UserController {
                         
                         // Set cookie with token
                         res.cookie('token', token, { httpOnly: true });
-                        return res.send('Logged in successfully');
+                        return res.redirect('/bandwidth');
                     }
                 }
             }
