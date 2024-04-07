@@ -8,7 +8,7 @@ const jwtAuth = (req, res, next) => {
 
     // 2. if no token, return the error.
     if (!token) {
-        return res.status(401).send('Unauthorized');
+        return res.status(401).send('Unauthorized, First Login to access this page');
     }
 
     // 3. check if token is valid.

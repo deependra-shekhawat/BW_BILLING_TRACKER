@@ -9,6 +9,7 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
+          <% if(userName) { %>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">BW Billing Tracker</a>
           </li>
@@ -23,6 +24,12 @@
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
+        <form class="d-flex" action="/user/signout" method="POST">
+          <button type="submit" class="btn" style="height: 37.6px;" title="Sign out">
+            <i class="fa fa-sign-out" style="font-size:30px;color:rgb(138, 1, 1)"></i>
+          </button>
+        </form>
+        <% } %>
       </div>
     </div>
   </nav>

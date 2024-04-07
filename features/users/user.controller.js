@@ -57,6 +57,14 @@ class UserController {
             res.send('User registered successfully');
         });
     }
+
+    static signout(req, res) {
+        // Clear JWT token by setting an expired cookie
+        res.cookie('token', '', { expires: new Date(0) });
+        req.user = null;
+        // Redirect to layout page
+        res.redirect('/');
+    }
 }
 
 export default UserController;
