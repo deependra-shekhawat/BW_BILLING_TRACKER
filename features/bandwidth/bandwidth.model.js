@@ -29,6 +29,28 @@ class BandwidthModel {
             throw error;
         }
     }
+
+    static async fetchLocations() {
+        try {
+            const excelData = await this.readExcel();
+            const locations = Object.keys(excelData);
+            return locations;
+        } catch (error) {
+            console.error('Error fetching locations:', error);
+            throw error;
+        }
+    }
+
+    static async fetchLocationData(location) {
+        try {
+            const excelData = await this.readExcel();
+            const locationData = excelData[location];
+            return locationData;
+        } catch (error) {
+            console.error(`Error fetching data for location ${location}:`, error);
+            throw error;
+        }
+    }
 }
 
 export default BandwidthModel;

@@ -40,7 +40,7 @@ server.set('views', './views');
 server.get('/', (req, res) => {
     // Pass flash messages to the template
     console.log(req.flash());
-    res.render('layout', { userName: null, flash: req.flash() });
+    res.render('layout', { userName: null, flash: req.flash(), excelData: null });
 });
 
 // Mount user routes
