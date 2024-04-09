@@ -1,9 +1,12 @@
 import express from 'express';
+import session from 'express-session';
 import dotenv from 'dotenv';
 import cookieParser from 'cookie-parser';
+import flash from 'connect-flash';
 import userRouter from './features/users/user.route.js';
 import jwtAuth from './middlewares/jwt.middleware.js';
 import bandwidthRouter from './features/bandwidth/bandwidth.route.js';
+import setFlash from './middlewares/flash.middleware.js';
 
 // 2. Create Server
 const server = express();
@@ -14,6 +17,18 @@ dotenv.config();
 server.use(express.json()); // Initialize json middleware
 server.use(cookieParser()); // Initialize cookie-parser middleware
 server.use(express.urlencoded({ extended: true }));
+server.use(express.static('public'));
+
+// Set up session middleware
+server.use(session({
+    secret: process.env.JWT_SECRET,
+    resave: true,
+    saveUninitialized: true
+}));
+
+// Using connect-flash to display flash notification in FE
+server.use(flash());
+server.use(setFlash);
 
 // Set EJS as the view engine
 server.set('view engine', 'ejs');
@@ -23,8 +38,9 @@ server.set('views', './views');
 
 // Route for rendering layout.ejs
 server.get('/', (req, res) => {
-    // Render layout.ejs with a title
-    res.render('layout',{userName: null});
+    // Pass flash messages to the template
+    console.log(req.flash());
+    res.render('layout', { userName: null, flash: req.flash() });
 });
 
 // Mount user routes

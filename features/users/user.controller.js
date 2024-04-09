@@ -6,15 +6,13 @@ class UserController {
     static async signin(req, res) {
         const { user, password } = req.body;
 
-        //console.log("login body : " + password);
-        
         // Read user info from text file
         fs.readFile('user_info.txt', 'utf8', async (err, data) => {
             if (err) {
                 console.error('Error reading user info:', err);
                 return res.status(500).send('Error reading user info');
             }
-            //console.log("file data"+ data);
+
             const lines = data.split('\n');
             for (let line of lines) {
                 if (!line) continue; // Skip empty lines
@@ -34,7 +32,10 @@ class UserController {
                     }
                 }
             }
-            return res.status(401).send('Invalid username or password');
+
+            // If the loop completes without finding a match, credentials are invalid
+            req.flash('error', 'Invalid username or password ☹️');
+            return res.redirect('/'); // Redirect back to the login page
         });
     }
 
