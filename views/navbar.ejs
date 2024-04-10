@@ -11,15 +11,22 @@
           </li>
           <% if(userName) { %>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">BW Billing Tracker</a>
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">BW Billing Tracker</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">BW Billing Tracker</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            <form class="d-flex" action="/bandwidth/" method="GET" id="locationForm">
+              <select id="location" name="location" class="form-control me-2">
+                <option class="dropdown-item">Select Location</option>
+                <% locations.forEach(location => { %>
+                  <option class="dropdown-item" value="<%= location %>"><%= location %></option>
+                <% }); %>
+              </select>
+              <button class="btn btn-outline-dark" type="submit">Submit</button>
+            </form>
           </li>
         </ul>
+
+
         <form class="d-flex">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
