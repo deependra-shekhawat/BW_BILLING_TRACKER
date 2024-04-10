@@ -13,12 +13,15 @@ class BandwidthController {
         }
     }
 
-    // Function to update data from Excel
+    // Function to update data from Excelbhjhb
     static async updateData(req, res) {
         const newData = req.body; // Assuming new data is sent in the request body
+        let location = newData.facility[0];
+        location = location.replace(/\d+$/, '');
+        console.log(location);
         try {
             // Update data in Excel
-            await BandwidthModel.updateExcel(newData);
+            await BandwidthModel.updateExcel(location, newData);
             return res.send('Data updated successfully');
         } catch (error) {
             console.error('Error updating data:', error);
@@ -45,11 +48,11 @@ class BandwidthController {
             // Fetch locations from the BandwidthModel
             const excelData = await BandwidthModel.readExcel();
             const locations = Object.keys(excelData);
-            console.log(locations);
+            //console.log(locations);
 
             // Fetch data for the specified location from the BandwidthModel
             const location = req.query.location;
-            console.log(req.body);
+            //console.log(req.body);
             const locationData = excelData[location];
             return res.render('layout',{userName: req.user, locations: locations, locationData: locationData});
         } catch (error) {

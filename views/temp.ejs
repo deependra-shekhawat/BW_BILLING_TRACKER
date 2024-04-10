@@ -1,109 +1,84 @@
 
-
-<div class="table-responsive-xxl">
-    <table class="table table-bordered table-striped table-hover">
-        <thead>
+<div class="table-responsive">
+  <table class="table table-bordered table-striped table-hover">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Month</th>
+        <th scope="col">Project Name</th>
+        <th scope="col">Status</th>
+        <th scope="col">Facility</th>
+        <th scope="col">Tower</th>
+        <th scope="col">BU</th>
+        <th scope="col">Subnet</th>
+        <th scope="col">PAT IP</th>
+        <th scope="col">PIDB</th>
+        <th scope="col">GDCN ID</th>
+        <th scope="col">Partition Name</th>
+        <th scope="col">ISP</th>
+        <th scope="col">Internet Bandwidth (in MB)</th>
+        <th scope="col">WBSe</th>
+        <th scope="col">RFC</th>
+        <th scope="col">Implementation Date</th>
+        <th scope="col">AMT POC</th>
+        <th scope="col">BCP Bandwidth</th>
+        <th scope="col">Comments</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody">
+      <% if(locationData && locationData.length > 0) { %>
+        <% locationData.forEach((item, index) => { %>
+          
+          <tr>
+            <th scope="row">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+              <%= index + 1 %>
+            </div>
+            </th>
+            <td>
+              <select aria-label="month" value="<%= item.Month %>">
+                <% const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']; %>
+                <% months.forEach(month => { %>
+                  <option value="<%= month %>" <% if(month === item.Month) { %> selected <% } %>><%= month %></option>
+                <% }); %>
+              </select>
+            </td>
+            <td><input type="text" placeholder="Project Name" aria-label="projectName" id="projectName" value="<%= item['Project Name'] %>"></td>
+            <td>
+              <select aria-label="status">
+                <option value="Live" <% if(item.Status === 'Live') { %> selected <% } %>>Live</option>
+                <option value="Decommissioned" <% if(item.Status === 'Decommissioned') { %> selected <% } %>>Decommissioned</option>
+              </select>
+            </td>
+            <td><input type="text" placeholder="Facility" aria-label="facility" id="facility" value="<%= item.Facility %>"></td>
+            <td><input type="text" placeholder="Tower" aria-label="tower" id="tower" value="<%= item.Tower %>"></td>
+            <td><input type="text" placeholder="BU" aria-label="bu" id="bu" value="<%= item.BU %>"></td>
+            <td><input type="text" placeholder="Subnet" aria-label="subnet" id="subnet" value="<%= item.Subnet %>"></td>
+            <td><input type="text" placeholder="PAT IP" aria-label="pat" id="pat" value="<%= item['PAT IP'] %>"></td>
+            <td><input type="text" placeholder="PIDB" aria-label="pidb" id="pidb" value="<%= item.PIDB %>"></td>
+            <td><input type="text" placeholder="GDCN ID" aria-label="gdcn" id="gdcn" value="<%= item.GDCN %>"></td>
+            <td><input type="text" placeholder="Partition Name" aria-label="partition" id="partition" value="<%= item['Partition Name'] %>"></td>
+            <td><input type="text" placeholder="ISP" aria-label="isp" id="isp" value="<%= item.ISP %>"></td>
+            <td><input type="text" placeholder="Internet Bandwidth (in MB)" aria-label="bw" id="bw" value="<%= item['Internet Bandwidth (in MB)'] %>"></td>
+            <td><input type="text" placeholder="WBSe" aria-label="wbse" id="wbse" value="<%= item.WBSe %>"></td>
+            <td><input type="text" placeholder="RFC" aria-label="rfc" id="rfc" value="<%= item.RFC %>"></td>
+            <td><input type="text" placeholder="Implementation Date" aria-label="implementationDate" id="implementationDate" value="<%= item['Implementation Date'] %>"></td>
+            <td><input type="text" placeholder="AMT POC" aria-label="amt" id="amt" value="<%= item['AMT POC'] %>"></td>
+            <td>
+              <select aria-label="bcp">
+                <option value="Yes" <% if(item['BCP Bandwidth'] === 'Yes') { %> selected <% } %>>Yes</option>
+                <option value="No" <% if(item['BCP Bandwidth'] === 'No') { %> selected <% } %>>No</option>
+              </select>
+            </td>
+            <td><textarea id="comment" rows="1" cols="50"><%= item.Comments %></textarea></td>
+          </tr>
+        <% }); %>
+      <% } else { %>
         <tr>
-          <th scope="col">#</th>
-          <th scope="col">Month</th>
-          <th scope="col">Project Name</th>
-          <th scope="col">Status</th>
-          <th scope="col">Facility</th>
-          <th scope="col">Tower</th>
-          <th scope="col">BU</th>
-          <th scope="col">Subnet</th>
-          <th scope="col">PAT IP</th>
-          <th scope="col">PIDB</th>
-          <th scope="col">GDCN ID</th>
-          <th scope="col">Partition Name</th>
-          <th scope="col">ISP</th>
-          <th scope="col">Internet Bandwidth (in MB)</th>
-          <th scope="col">WBSe</th>
-          <th scope="col">RFC</th>
-          <th scope="col">Implementation Date</th>
-          <th scope="col">AMT POC</th>
-          <th scope="col">BCP Bandwidth</th>
-          <th scope="col">Comments</th>
+          <td colspan="19">No data available for selected location</td>
         </tr>
-      </thead>
-      <form>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>
-                <select id="month" aria-label="month">
-                  <option selected>month</option>
-                  <option value="Jan">Jan</option>
-                  <option value="Feb">Feb</option>
-                  <option value="Mar">Mar</option>
-                  <option value="Apr">Apr</option>
-                  <option value="May">May</option>
-                  <option value="Jun">Jun</option>
-                  <option value="Jul">Jul</option>
-                  <option value="Aug">Aug</option>
-                  <option value="Sep">Sep</option>
-                  <option value="Oct">Oct</option>
-                  <option value="Nov">Nov</option>
-                  <option value="Dec">Dec</option>
-                </select>
-              </td>
-              <td><input type="text" placeholder="Project Name" aria-label="projectName" id="projectName"></td>
-              <td>
-                <select id="status" aria-label="status">
-                    <option selected>Status</option>
-                    <option value="Jan">Live</option>
-                    <option value="Jan">Decommissioned</option>
-                </select>
-              </td>
-              <td>
-                <select id="facility" aria-label="facility">
-                  <option selected>facility</option>
-                  <option value="Jan">BDC4</option>
-                  <option value="Feb">BDC6</option>
-                  <option value="Mar">BDC7</option>
-                  <option value="Apr">BDC9</option>
-                  <option value="May">BDC10</option>
-                  <option value="Jun">BDC11</option>
-                  <option value="Jul">BDC13</option>
-                  <option value="Aug">BDC14</option>
-                </select>
-              </td>
-              <td>
-                <select id="facility" aria-label="facility">
-                  <option selected>Tower</option>
-                  <option value="Jan">A</option>
-                  <option value="Feb">B</option>
-                  <option value="Mar">C</option>
-                  <option value="Apr">D</option>
-                  <option value="May">E</option>
-                  <option value="Jun">F</option>
-                  <option value="Jul">G</option>
-                  <option value="Aug">H</option>
-                  <option value="Aug">I</option>
-                </select>
-              </td>
-              <td><input type="text"  placeholder="Business Unit" aria-label="bu" id="bu"></td>
-              <td><input type="text" placeholder="Subnet" aria-label="subnet" id="subnet"></td>
-              <td><input type="text" placeholder="PAT IP" aria-label="pat" id="pat"></td>
-              <td><input type="text" placeholder="PIDB" aria-label="pidb" id="pidb"></td>
-              <td><input type="text" placeholder="GDCN" aria-label="gdcn" id="gdcn"></td>
-              <td><input type="text" placeholder="Partition Name" aria-label="partition" id="partition"></td>
-              <td><input type="text" placeholder="ISP" aria-label="isp" id="isp"></td>
-              <td><input type="text" placeholder="Bandwidth(in Mb)" aria-label="bw" id="bw"></td>
-              <td><input type="text" placeholder="WBSE" aria-label="wbse" id="wbse"></td>
-              <td><input type="text" placeholder="RFC" aria-label="rfc" id="rfc"></td>
-              <td><input type="text" placeholder="Implementation Date" aria-label="implementationDate" id="implementationDate"></td>
-              <td><input type="text" placeholder="AMT POC" aria-label="amt" id="amt"></td>
-              <td>
-                <select id="bcp" aria-label="bcp">
-                  <option selected>select</option>
-                  <option value="Jan">Yes</option>
-                  <option value="Feb">No</option>
-                </select>
-              </td>		  
-              <td><textarea id="comment" rows="1" cols="50"></textarea></td>
-            </tr>
-          </tbody>
-        </form>
-    </table>
+      <% } %>
+    </tbody>
+  </table>
 </div>

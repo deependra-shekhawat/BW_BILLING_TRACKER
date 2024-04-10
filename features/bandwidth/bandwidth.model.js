@@ -19,16 +19,52 @@ class BandwidthModel {
         }
     }
 
-    static async updateExcel(newData) {
+    static async updateExcel(location, newData) {
         try {
-            // Implement logic to update Excel with new data
-            // Example: xlsx.writeFile(updatedWorkbook, excelConfig.filePath);
-            // Make sure to properly format and save the updated Excel file
+            const workbook = xlsx.readFile(excelConfig.filePath);
+    
+            if (!workbook.Sheets.hasOwnProperty(location)) {
+                throw new Error(`Sheet with name ${location} not found in Excel file.`);
+            }
+    
+            const sheet = workbook.Sheets[location];
+            const range = xlsx.utils.decode_range(sheet['!ref']);
+    
+            // Loop through the selected rows in the newData object
+            for (const rowIndex of newData.selectedRows) {
+                // Update data in the Excel sheet based on the row index and column names
+                // Adjust column index according to your Excel sheet structure
+                sheet['A' + rowIndex] = { v: newData.month[rowIndex - 2], t: 's' };
+                sheet['B' + rowIndex] = { v: newData.projectName[rowIndex - 2], t: 's' };
+                sheet['C' + rowIndex] = { v: newData.status[rowIndex - 2], t: 's' };
+                sheet['D' + rowIndex] = { v: newData.facility[rowIndex - 2], t: 's' };
+                sheet['E' + rowIndex] = { v: newData.tower[rowIndex - 2], t: 's' };
+                sheet['F' + rowIndex] = { v: newData.bu[rowIndex - 2], t: 's' };
+                sheet['G' + rowIndex] = { v: newData.subnet[rowIndex - 2], t: 's' };
+                sheet['H' + rowIndex] = { v: newData.pat[rowIndex - 2], t: 's' };
+                sheet['I' + rowIndex] = { v: newData.pidb[rowIndex - 2], t: 's' };
+                sheet['J' + rowIndex] = { v: newData.gdcn[rowIndex - 2], t: 's' };
+                sheet['K' + rowIndex] = { v: newData.partition[rowIndex - 2], t: 's' };
+                sheet['L' + rowIndex] = { v: newData.isp[rowIndex - 2], t: 's' };
+                sheet['M' + rowIndex] = { v: newData.bw[rowIndex - 2], t: 's' };
+                sheet['N' + rowIndex] = { v: newData.wbse[rowIndex - 2], t: 's' };
+                sheet['O' + rowIndex] = { v: newData.rfc[rowIndex - 2], t: 's' };
+                sheet['P' + rowIndex] = { v: newData.implementationDate[rowIndex - 2], t: 's' };
+                sheet['Q' + rowIndex] = { v: newData.amt[rowIndex - 2], t: 's' };
+                sheet['R' + rowIndex] = { v: newData.bcp[rowIndex - 2], t: 's' };
+                sheet['S' + rowIndex] = { v: newData.comment[rowIndex - 2], t: 's' };
+            }
+
+            // Save the workbook with updated data
+            xlsx.writeFile(workbook, excelConfig.filePath);
+    
+            return true; // Indicates successful update
         } catch (error) {
             console.error('Error updating Excel:', error);
             throw error;
         }
     }
+    
 
     static async fetchLocations() {
         try {
