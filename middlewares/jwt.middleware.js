@@ -18,7 +18,7 @@ const jwtAuth = (req, res, next) => {
             process.env.JWT_SECRET // Read JWT secret from environment variable
         );
         req.user = payload.user.user;
-        console.log(req.user);
+        //console.log(req.user);
         next();
     } catch (err) {
         // 4. return error.

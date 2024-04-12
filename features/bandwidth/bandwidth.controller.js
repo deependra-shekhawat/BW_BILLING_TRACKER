@@ -6,23 +6,28 @@ class BandwidthController {
         try {
             // Fetch data from Excel
             const data = await BandwidthModel.readExcel();
-            return res.render('layout',{userName: req.user, locations: null, locationData: null});
+            return res.render('layout', { userName: req.user, locations: null, locationData: null });
         } catch (error) {
             console.error('Error fetching data:', error);
             return res.status(500).send('Internal Server Error');
         }
     }
 
-    // Function to update data from Excelbhjhb
+    // Function to update data from Excel
     static async updateData(req, res) {
         const newData = req.body; // Assuming new data is sent in the request body
         let location = newData.facility[0];
         location = location.replace(/\d+$/, '');
-        console.log(location);
+        req.query.location = location.toUpperCase(); // Convert location to uppercase
+        if (!newData.selectedRows || newData.selectedRows.length < 1) {
+            req.flash('error', 'Please select at least one entry to update');
+            return BandwidthController.fetchLocationData(req, res);
+        }
         try {
             // Update data in Excel
-            await BandwidthModel.updateExcel(location, newData);
-            return res.send('Data updated successfully');
+            await BandwidthModel.updateExcel(location.toUpperCase(), newData);
+            req.flash('success', 'Data updated successfully');
+            return BandwidthController.fetchLocationData(req, res);
         } catch (error) {
             console.error('Error updating data:', error);
             return res.status(500).send('Internal Server Error');
@@ -33,9 +38,9 @@ class BandwidthController {
     static async fetchLocations(req, res) {
         try {
             // Fetch locations from the BandwidthModel
-            const data = await BandwidthModel.readExcel();
+            let data = await BandwidthModel.readExcel();
             data = Object.keys(data);
-            return res.render('layout',{userName: req.user, locations: data, locationData: null});
+            return res.render('layout', { userName: req.user, locations: data, locationData: null });
         } catch (error) {
             console.error('Error fetching locations:', error);
             throw error;
@@ -47,14 +52,16 @@ class BandwidthController {
         try {
             // Fetch locations from the BandwidthModel
             const excelData = await BandwidthModel.readExcel();
-            const locations = Object.keys(excelData);
-            //console.log(locations);
+            let locations = Object.keys(excelData);
+            // Convert locations to uppercase
+            locations = locations.map(location => location.toUpperCase());
 
             // Fetch data for the specified location from the BandwidthModel
-            const location = req.query.location;
-            //console.log(req.body);
+            let location = req.query.location;
+            // Convert location to uppercase
+            location = location.toUpperCase();
             const locationData = excelData[location];
-            return res.render('layout',{userName: req.user, locations: locations, locationData: locationData});
+            return res.render('layout', { userName: req.user, locations: locations, locationData: locationData, selectedLocation: location, messages: req.flash() });
         } catch (error) {
             console.error(`Error fetching data for location ${location}:`, error);
             throw error;

@@ -35,7 +35,8 @@ class UserController {
 
             // If the loop completes without finding a match, credentials are invalid
             req.flash('error', 'Invalid username or password ☹️');
-            return res.redirect('/'); // Redirect back to the login page
+            //console.log(req.flash());
+            res.redirect('/'); // Redirect back to the login page
         });
     }
 

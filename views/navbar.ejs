@@ -16,7 +16,11 @@
           <li class="nav-item">
             <form class="d-flex" action="/bandwidth/" method="GET" id="locationForm">
               <select id="location" name="location" class="form-control me-2">
-                <option class="dropdown-item">Select Location</option>
+                <% if(selectedLocation) { %>
+                  <option class="dropdown-item" value="<%= selectedLocation %>" selected><%= selectedLocation %></option>
+                <% } else{ %>
+                  <option class="dropdown-item">Select Location</option>
+                <% } %>
                 <% locations.forEach(location => { %>
                   <option class="dropdown-item" value="<%= location %>"><%= location %></option>
                 <% }); %>

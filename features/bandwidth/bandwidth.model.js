@@ -37,7 +37,7 @@ class BandwidthModel {
                 sheet['A' + rowIndex] = { v: newData.month[rowIndex - 2], t: 's' };
                 sheet['B' + rowIndex] = { v: newData.projectName[rowIndex - 2], t: 's' };
                 sheet['C' + rowIndex] = { v: newData.status[rowIndex - 2], t: 's' };
-                sheet['D' + rowIndex] = { v: newData.facility[rowIndex - 2], t: 's' };
+                sheet['D' + rowIndex] = { v: (newData.facility[rowIndex - 2]).toUpperCase(), t: 's' };
                 sheet['E' + rowIndex] = { v: newData.tower[rowIndex - 2], t: 's' };
                 sheet['F' + rowIndex] = { v: newData.bu[rowIndex - 2], t: 's' };
                 sheet['G' + rowIndex] = { v: newData.subnet[rowIndex - 2], t: 's' };
@@ -69,7 +69,9 @@ class BandwidthModel {
     static async fetchLocations() {
         try {
             const excelData = await this.readExcel();
-            const locations = Object.keys(excelData);
+            let locations = Object.keys(excelData);
+            // Convert locations to uppercase
+            locations = locations.map(location => location.toUpperCase());
             return locations;
         } catch (error) {
             console.error('Error fetching locations:', error);
@@ -79,6 +81,8 @@ class BandwidthModel {
 
     static async fetchLocationData(location) {
         try {
+            // Convert location to uppercase
+            location = location.toUpperCase();
             const excelData = await this.readExcel();
             const locationData = excelData[location];
             return locationData;
