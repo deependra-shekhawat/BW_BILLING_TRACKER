@@ -63,7 +63,7 @@ class BandwidthController {
             const locationData = excelData[location];
             return res.render('layout', { userName: req.user, locations: locations, locationData: locationData, selectedLocation: location, messages: req.flash() });
         } catch (error) {
-            console.error(`Error fetching data for location ${location}:`, error);
+            console.error(error);
             throw error;
         }
     }
