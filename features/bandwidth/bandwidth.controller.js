@@ -59,11 +59,13 @@ class BandwidthController {
             // Fetch data for the specified location from the BandwidthModel
             let location = req.query.location;
             // Convert location to uppercase
-            location = location.toUpperCase();
+            if(location){
+                location = location.toUpperCase();
+            }
             const locationData = excelData[location];
             return res.render('layout', { userName: req.user, locations: locations, locationData: locationData, selectedLocation: location, messages: req.flash() });
         } catch (error) {
-            console.error(`Error fetching data for location ${location}:`, error);
+            console.error(`Error fetching data for location ${req.query.location}:`, error);
             throw error;
         }
     }
