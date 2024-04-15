@@ -28,50 +28,6 @@
       <tbody id="tableBody">
         <% if(locationData && locationData.length > 0) { %>
           <% locationData.forEach((item, index) => { %>
-            <!-- <tr>
-              <td>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="checkbox" name="selectedRows<%= index + 2 %>" id="checkbox<%= index + 2 %>" value="<%= index + 2 %>">
-                  <%= index + 2 %>
-                </div>
-              </td>
-              <td>
-                <select name="month_<%= index + 2 %>" aria-label="month" value="<%= item.Month %>">
-                  <% const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']; %>
-                  <% months.forEach(month => { %>
-                    <option value="<%= month %>" <% if(month === item.Month) { %> selected <% } %>><%= month %></option>
-                  <% }); %>
-                </select>
-              </td>
-              <td><input type="text" name="projectName_<%= index + 2 %>" placeholder="Project Name" aria-label="projectName" value="<%= item['Project Name'] %>"></td>
-              <td>
-                <select name="status_<%= index + 2 %>" aria-label="status">
-                  <option value="Live" <% if(item.Status === 'Live') { %> selected <% } %>>Live</option>
-                  <option value="Decommissioned" <% if(item.Status === 'Decommissioned') { %> selected <% } %>>Decommissioned</option>
-                </select>
-              </td>
-              <td><input type="text" name="facility_<%= index + 2 %>" placeholder="Facility" aria-label="facility" value="<%= item.Facility %>"></td>
-              <td><input type="text" name="tower_<%= index + 2 %>" placeholder="Tower" aria-label="tower" value="<%= item.Tower %>"></td>
-              <td><input type="text" name="bu_<%= index + 2 %>" placeholder="BU" aria-label="bu" value="<%= item.BU %>"></td>
-              <td><input type="text" name="subnet_<%= index + 2 %>" placeholder="Subnet" aria-label="subnet" value="<%= item.Subnet %>"></td>
-              <td><input type="text" name="pat_<%= index + 2 %>" placeholder="PAT IP" aria-label="pat" value="<%= item['PAT IP'] %>"></td>
-              <td><input type="text" name="pidb_<%= index + 2 %>" placeholder="PIDB" aria-label="pidb" value="<%= item.PIDB %>"></td>
-              <td><input type="text" name="gdcn_<%= index + 2 %>" placeholder="GDCN ID" aria-label="gdcn" value="<%= item.GDCN %>"></td>
-              <td><input type="text" name="partition_<%= index + 2 %>" placeholder="Partition Name" aria-label="partition" value="<%= item['Partition Name'] %>"></td>
-              <td><input type="text" name="isp_<%= index + 2 %>" placeholder="ISP" aria-label="isp" value="<%= item.ISP %>"></td>
-              <td><input type="text" name="bw_<%= index + 2 %>" placeholder="Internet Bandwidth (in MB)" aria-label="bw" value="<%= item['Internet Bandwidth (in MB)'] %>"></td>
-              <td><input type="text" name="wbse_<%= index + 2 %>" placeholder="WBSe" aria-label="wbse" value="<%= item.WBSe %>"></td>
-              <td><input type="text" name="rfc_<%= index + 2 %>" placeholder="RFC" aria-label="rfc" value="<%= item.RFC %>"></td>
-              <td><input type="text" name="implementationDate_<%= index + 2 %>" placeholder="Implementation Date" aria-label="implementationDate" value="<%= item['Implementation Date'] %>"></td>
-              <td><input type="text" name="amt_<%= index + 2 %>" placeholder="AMT POC" aria-label="amt" value="<%= item['AMT POC'] %>"></td>
-              <td>
-                <select name="bcp_<%= index + 2 %>" aria-label="bcp">
-                  <option value="Yes" <% if(item['BCP Bandwidth'] === 'Yes') { %> selected <% } %>>Yes</option>
-                  <option value="No" <% if(item['BCP Bandwidth'] === 'No') { %> selected <% } %>>No</option>
-                </select>
-              </td>
-              <td><textarea name="comment_<%= index + 2 %>" rows="1" cols="50"><%= item.Comments %></textarea></td>
-            </tr> -->
             <tr>
               <td>
                 <div class="form-check form-check-inline">
@@ -81,8 +37,8 @@
               </td>
               <td>
                 <select name="month[]" aria-label="month">
-                  <% const months1 = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']; %>
-                  <% months1.forEach(month => { %>
+                  <% const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']; %>
+                  <% months.forEach(month => { %>
                     <option value="<%= month %>" <% if(month === item.Month) { %> selected <% } %>><%= month %></option>
                   <% }); %>
                 </select>
@@ -156,7 +112,18 @@
           </tr>
         <% } %>
       </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2"><button type="button" class="btn btn-success btn-copy" style="width: 90%; position: relative;"><i class="bi bi-clipboard"></i>&nbsp;Copy</button></td>
+          <td colspan="18">
+            <div class="center1">
+              <button type="submit" class="btn btn-primary" style="width: 50%; position: relative;">Submit Changes</button>
+              &nbsp;
+              <button type="submit" class="btn btn-primary" style="width: 50%; position: relative;">Submit Changes</button>
+            </div>
+          </td>
+        </tr>
+      </tfoot>
     </table>
   </div>
-  <button type="submit">Submit</button>
 </form>

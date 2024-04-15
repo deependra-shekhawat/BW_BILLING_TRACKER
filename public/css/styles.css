@@ -2,3 +2,8 @@ table select, table input {
   height: 26px;
   border-radius: 3px;
 }
+
+.center1 {
+  display: flex;
+  justify-content: center;
+}
