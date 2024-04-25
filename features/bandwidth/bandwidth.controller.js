@@ -2,7 +2,7 @@ import BandwidthModel from "./bandwidth.model.js";
 
 class BandwidthController {
     // Function to fetch data from Excel
-    static async fetchData(req, res) {
+    /*static async fetchData(req, res) {
         try {
             // Fetch data from Excel
             const data = await BandwidthModel.readExcel();
@@ -11,7 +11,7 @@ class BandwidthController {
             console.error('Error fetching data:', error);
             return res.status(500).send('Internal Server Error');
         }
-    }
+    }*/
 
     // Function to update data from Excel
     static async updateData(req, res) {
@@ -35,7 +35,7 @@ class BandwidthController {
     }
 
     // Function to fetch locations
-    static async fetchLocations(req, res) {
+    /*static async fetchLocations(req, res) {
         try {
             // Fetch locations from the BandwidthModel
             let data = await BandwidthModel.readExcel();
@@ -45,7 +45,7 @@ class BandwidthController {
             console.error('Error fetching locations:', error);
             throw error;
         }
-    }
+    }*/
 
     // Function to fetch data for a specific location
     static async fetchLocationData(req, res) {
