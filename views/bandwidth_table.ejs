@@ -1,6 +1,6 @@
 <form action="/bandwidth/update" method="POST" id="dataTableForm">
   <div class="table-responsive">
-    <table class="table table-bordered table-striped table-hover">
+    <table class="table table-bordered table-striped table-hover table-resizable resizable resizable-table">
       <thead>
         <tr>
           <th scope="col">#</th>
@@ -44,7 +44,7 @@
                 </select>
               </td>
               <td>
-                <input type="text" name="projectName[]" placeholder="Project Name" aria-label="projectName" value="<%= item['Project Name'] %>">
+                <input type="text" name="projectName[]" placeholder="Project Name" style="width:300px" aria-label="projectName" value="<%= item['Project Name'] %>">
               </td>
               <td>
                 <select name="status[]" aria-label="status">
@@ -53,55 +53,57 @@
                 </select>
               </td>
               <td>
-                <input type="text" name="facility[]" placeholder="Facility" aria-label="facility" value="<%= item.Facility %>">
+                <input type="text" name="facility[]" placeholder="Facility" style="width:100px;" aria-label="facility" value="<%= item.Facility %>">
               </td>
               <td>
-                <input type="text" name="tower[]" placeholder="Tower" aria-label="tower" value="<%= item.Tower %>">
+                <input type="text" name="tower[]" placeholder="Tower" style="width:40px" aria-label="tower" value="<%= item.Tower %>">
               </td>
               <td>
-                <input type="text" name="bu[]" placeholder="BU" aria-label="bu" value="<%= item.BU %>">
+                <input type="text" name="bu[]" placeholder="BU" style="width:100px" aria-label="bu" value="<%= item.BU %>">
               </td>
               <td>
-                <input type="text" name="subnet[]" placeholder="Subnet" aria-label="subnet" value="<%= item.Subnet %>">
+                <input type="text" name="subnet[]" placeholder="Subnet" style="width:150px" aria-label="subnet" value="<%= item.Subnet %>">
               </td>
               <td>
-                <input type="text" name="pat[]" placeholder="PAT IP" aria-label="pat" value="<%= item['PAT IP'] %>">
+                <input type="text" name="pat[]" placeholder="PAT IP" style="width:150px" aria-label="pat" value="<%= item['PAT IP'] %>">
               </td>
               <td>
-                <input type="text" name="pidb[]" placeholder="PIDB" aria-label="pidb" value="<%= item.PIDB %>">
+                <input type="text" name="pidb[]" placeholder="PIDB" style="width:100px" aria-label="pidb" value="<%= item.PIDB %>">
               </td>
               <td>
-                <input type="text" name="gdcn[]" placeholder="GDCN ID" aria-label="gdcn" value="<%= item.GDCN %>">
+                <input type="text" name="gdcn[]" placeholder="GDCN ID" style="width:100px" aria-label="gdcn" value="<%= item.GDCN %>">
               </td>
               <td>
-                <input type="text" name="partition[]" placeholder="Partition Name" aria-label="partition" value="<%= item['Partition Name'] %>">
+                <input type="text" name="partition[]" placeholder="Partition Name" style="width:300px" aria-label="partition" value="<%= item['Partition Name'] %>">
               </td>
               <td>
-                <input type="text" name="isp[]" placeholder="ISP" aria-label="isp" value="<%= item.ISP %>">
+                <input type="text" name="isp[]" placeholder="ISP" style="width:100px" aria-label="isp" value="<%= item.ISP %>">
               </td>
               <td>
-                <input type="text" name="bw[]" placeholder="Internet Bandwidth (in MB)" aria-label="bw" value="<%= item['Internet Bandwidth (in MB)'] %>">
+                <input type="text" name="bw[]" placeholder="Internet Bandwidth (in MB)" style="width:90px" aria-label="bw" value="<%= item['Internet Bandwidth (in MB)'] %>">
               </td>
               <td>
-                <input type="text" name="wbse[]" placeholder="WBSe" aria-label="wbse" value="<%= item.WBSe %>">
+                <input type="text" name="wbse[]" placeholder="WBSe" style="width:100px" aria-label="wbse" value="<%= item.WBSe %>">
               </td>
               <td>
-                <input type="text" name="rfc[]" placeholder="RFC" aria-label="rfc" value="<%= item.RFC %>">
+                <input type="text" name="rfc[]" placeholder="RFC" style="width:100px" aria-label="rfc" value="<%= item.RFC %>">
               </td>
               <td>
-                <input type="text" name="implementationDate[]" placeholder="Implementation Date" aria-label="implementationDate" value="<%= item['Implementation Date'] %>">
-              </td>
+                <input type="text" name="implementationDate[]" placeholder="Implementation Date" style="width:100px" aria-label="implementationDate" value="<%= (typeof item['Implementation Date']) == 'number' ? (new Date(item['Implementation Date']).toLocaleDateString()) : (String(item['Implementation Date'])) %>">
+				</td>
               <td>
                 <input type="text" name="amt[]" placeholder="AMT POC" aria-label="amt" value="<%= item['AMT POC'] %>">
               </td>
               <td>
-                <select name="bcp[]" aria-label="bcp">
-                  <option value="Yes" <% if(item['BCP Bandwidth'] === 'Yes') { %> selected <% } %>>Yes</option>
-                  <option value="No" <% if(item['BCP Bandwidth'] === 'No') { %> selected <% } %>>No</option>
-                </select>
-              </td>
+				  <select name="bcp[]" aria-label="bcp">
+					  <option value="No"
+						  <% if(item['BCP'] && item['BCP'].toString().toLowerCase() === 'no') { %> selected <% } %>>No</option>
+					  <option value="Yes"
+						  <% if(item['BCP'] && item['BCP'].toString().toLowerCase() === 'yes') { %> selected <% } %>>Yes</option>
+				  </select>
+			  </td>
               <td>
-                <textarea name="comment[]" rows="1" cols="50"><%= item.Comments %></textarea>
+                <textarea name="comment[]" rows="2" cols="80"><%= item.Comments %></textarea>
               </td>
             </tr>
             
@@ -113,17 +115,14 @@
         <% } %>
       </tbody>
       <tfoot>
-        <tr>
-          <td colspan="2"><button type="button" class="btn btn-success btn-copy" style="width: 90%; position: relative;"><i class="bi bi-clipboard"></i>&nbsp;Copy</button></td>
-          <td colspan="18">
+        <tr class="bg-secondary bg-gradient fixed-bottom">
+          <td style="width:200px;"><button type="button" class="btn btn-success btn-copy" style="width: 90%; font-size: 12px; padding: 2px 0; position: relative;"><i class="bi bi-clipboard"></i>&nbsp;Copy</button></td>
+          <td style="width:1100px;">
             <div class="center1">
-              <button type="submit" class="btn btn-primary" style="width: 50%; position: relative;">Submit Changes</button>
-              &nbsp;
-              <button type="submit" class="btn btn-primary" style="width: 50%; position: relative;">Submit Changes</button>
+              <button type="submit" class="btn btn-primary" style="width: 80%; font-size: 12px; padding: 2px 0; position: relative;">Submit Changes</button>
             </div>
           </td>
         </tr>
-      </tfoot>
     </table>
   </div>
 </form>
