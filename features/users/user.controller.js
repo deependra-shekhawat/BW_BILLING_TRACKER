@@ -24,7 +24,7 @@ class UserController {
                     const match = await bcrypt.compare(password, userInfo.password);
                     if (match) {
                         // Generate JWT token with user information
-                        const token = jwt.sign({ user: userInfo }, process.env.JWT_SECRET, { expiresIn: '1h' });
+                        const token = jwt.sign({ user: userInfo }, process.env.JWT_SECRET, { expiresIn: '15m' });
                         
                         // Set cookie with token
                         res.cookie('token', token, { httpOnly: true });

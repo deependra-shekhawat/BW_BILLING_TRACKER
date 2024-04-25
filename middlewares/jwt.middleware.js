@@ -17,6 +17,20 @@ const jwtAuth = (req, res, next) => {
             token,
             process.env.JWT_SECRET // Read JWT secret from environment variable
         );
+        
+        // Check if the token is about to expire in less than 10 minutes
+        const now = Math.floor(Date.now() / 1000);
+        const tokenExp = payload.exp;
+        const timeDiff = tokenExp - now;
+        const fifteenMinutesInSeconds = 10 * 60;
+        if (timeDiff < fifteenMinutesInSeconds) {
+            // Generate a new token with an extended expiration time
+            const newToken = jwt.sign({ user: payload.user.user }, process.env.JWT_SECRET, { expiresIn: '15m' });
+            
+            // Set the new token in the response cookien
+            res.cookie('token', newToken, { httpOnly: true });
+        }
+
         req.user = payload.user.user;
         //console.log(req.user);
         next();

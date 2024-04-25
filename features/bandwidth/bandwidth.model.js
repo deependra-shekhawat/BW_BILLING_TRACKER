@@ -49,7 +49,7 @@ class BandwidthModel {
                 sheet['M' + rowIndex] = { v: newData.bw[rowIndex - 2], t: 's' };
                 sheet['N' + rowIndex] = { v: newData.wbse[rowIndex - 2], t: 's' };
                 sheet['O' + rowIndex] = { v: newData.rfc[rowIndex - 2], t: 's' };
-                sheet['P' + rowIndex] = { v: (newData.implementationDate[rowIndex - 2]).toString, t: 's' };
+                sheet['P' + rowIndex] = { v: newData.implementationDate[rowIndex - 2], t: 's' };
                 sheet['Q' + rowIndex] = { v: newData.amt[rowIndex - 2], t: 's' };
                 sheet['R' + rowIndex] = { v: newData.bcp[rowIndex - 2], t: 's' };
                 sheet['S' + rowIndex] = { v: newData.comment[rowIndex - 2], t: 's' };
