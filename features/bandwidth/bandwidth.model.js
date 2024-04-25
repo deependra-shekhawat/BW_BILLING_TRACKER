@@ -65,32 +65,48 @@ class BandwidthModel {
         }
     }
     
-
-    /*static async fetchLocations() {
-        try {
-            const excelData = await this.readExcel();
-            let locations = Object.keys(excelData);
-            // Convert locations to uppercase
-            locations = locations.map(location => location.toUpperCase());
-            return locations;
-        } catch (error) {
-            console.error('Error fetching locations:', error);
-            throw error;
-        }
-    }*/
-
-    /*static async fetchLocationData(location) {
-        try {
-            // Convert location to uppercase
-            location = location.toUpperCase();
-            const excelData = await this.readExcel();
-            const locationData = excelData[location];
-            return locationData;
-        } catch (error) {
-            console.error(`Error fetching data for location ${location}:`, error);
-            throw error;
-        }
-    }*/
+    // static async deleteExcelRows(location, selectedRows) {
+    //     try {
+    //         const workbook = xlsx.readFile(excelConfig.filePath);
+    
+    //         if (!workbook.Sheets.hasOwnProperty(location)) {
+    //             throw new Error(`Sheet with name ${location} not found in Excel file.`);
+    //         }
+    
+    //         const sheet = workbook.Sheets[location];
+    //         const range = xlsx.utils.decode_range(sheet['!ref']);
+    //         const maxRow = range.e.r; // Get the index of the last row
+    
+    //         // Loop through the selected rows and shift remaining rows up
+    //         for (const rowIndex of selectedRows) {
+    //             // Shift rows up from the deleted row index to the end of the sheet
+    //             for (let row = rowIndex; row < maxRow; row++) {
+    //                 for (let col = range.s.c; col <= range.e.c; col++) {
+    //                     const cellAddressCurrent = xlsx.utils.encode_cell({ r: row, c: col });
+    //                     const cellAddressNext = xlsx.utils.encode_cell({ r: row + 1, c: col });
+    //                     sheet[cellAddressCurrent] = sheet[cellAddressNext]; // Shift data up
+    //                 }
+    //             }
+    //         }
+    
+    //         // Clear the data in the last row after shifting
+    //         for (let col = range.s.c; col <= range.e.c; col++) {
+    //             const cellAddress = xlsx.utils.encode_cell({ r: maxRow, c: col });
+    //             sheet[cellAddress] = { v: '', t: 's' }; // Clear the value in the last row
+    //         }
+    
+    //         // Update the range to reflect the shifted rows
+    //         range.e.r -= selectedRows.length;
+    
+    //         // Save the workbook with updated data
+    //         xlsx.writeFile(workbook, excelConfig.filePath);
+    
+    //         return true; // Indicates successful deletion
+    //     } catch (error) {
+    //         console.error('Error deleting Excel rows:', error);
+    //         throw error;
+    //     }
+    // }
 }
 
 export default BandwidthModel;

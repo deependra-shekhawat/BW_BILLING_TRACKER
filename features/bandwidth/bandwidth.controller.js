@@ -1,18 +1,6 @@
 import BandwidthModel from "./bandwidth.model.js";
 
 class BandwidthController {
-    // Function to fetch data from Excel
-    /*static async fetchData(req, res) {
-        try {
-            // Fetch data from Excel
-            const data = await BandwidthModel.readExcel();
-            return res.render('layout', { userName: req.user, locations: null, locationData: null });
-        } catch (error) {
-            console.error('Error fetching data:', error);
-            return res.status(500).send('Internal Server Error');
-        }
-    }*/
-
     // Function to update data from Excel
     static async updateData(req, res) {
         const newData = req.body; // Assuming new data is sent in the request body
@@ -33,19 +21,6 @@ class BandwidthController {
             return res.status(500).send('Internal Server Error');
         }
     }
-
-    // Function to fetch locations
-    /*static async fetchLocations(req, res) {
-        try {
-            // Fetch locations from the BandwidthModel
-            let data = await BandwidthModel.readExcel();
-            data = Object.keys(data);
-            return res.render('layout', { userName: req.user, locations: data, locationData: null });
-        } catch (error) {
-            console.error('Error fetching locations:', error);
-            throw error;
-        }
-    }*/
 
     // Function to fetch data for a specific location
     static async fetchLocationData(req, res) {
@@ -69,6 +44,29 @@ class BandwidthController {
             throw error;
         }
     }
+
+    // static async deleteData(req, res) {
+    //     const { selectedRows, location} = req.body;
+    //     req.query.location = location;
+
+    //     if (!selectedRows || selectedRows.length < 1) {
+    //         console.log(selectedRows, req.body);
+    //         return BandwidthController.fetchLocationData(req, res);
+    //     }
+
+    //     try {
+
+    //         console.log(selectedRows, req.body);
+    //         await BandwidthModel.deleteExcelRows(location, selectedRows);
+    //         req.flash('success', 'Data deleed successfully');
+    //         return BandwidthController.fetchLocationData(req, res);
+            
+    //     } catch (error) {
+    //         console.error('Error deleting data:', error);
+    //         return res.status(500).send('Internal Server Error');
+    //     }
+    // }
+
 }
 
 export default BandwidthController;
