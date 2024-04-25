@@ -50,6 +50,24 @@ document.addEventListener('DOMContentLoaded', function () {
     document.body.removeChild(tempTextArea);
   
     // Alert the user
-    alert('Data copied to clipboard');
+    //alert('Data copied to clipboard');
+    // Display flash message
+    var flashMessage = document.createElement('div');
+    flashMessage.classList.add('flash-message');
+    flashMessage.textContent = 'Data copied to clipboard';
+    flashMessage.style.position = 'fixed';
+    flashMessage.style.top = '80px';
+    flashMessage.style.right = '20px';
+    flashMessage.style.backgroundColor = 'green';
+    flashMessage.style.color = 'white';
+    flashMessage.style.padding = '10px';
+    flashMessage.style.borderRadius = '5px';
+    flashMessage.style.boxShadow = '0px 0px 10px rgba(0, 0, 0, 0.5)';
+    document.body.appendChild(flashMessage);
+  
+    // Remove flash message after 2 seconds
+    setTimeout(function() {
+        document.body.removeChild(flashMessage);
+    }, 2000);
   }
   
