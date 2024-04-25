@@ -49,7 +49,7 @@ class BandwidthModel {
                 sheet['M' + rowIndex] = { v: newData.bw[rowIndex - 2], t: 's' };
                 sheet['N' + rowIndex] = { v: newData.wbse[rowIndex - 2], t: 's' };
                 sheet['O' + rowIndex] = { v: newData.rfc[rowIndex - 2], t: 's' };
-                sheet['P' + rowIndex] = { v: newData.implementationDate[rowIndex - 2], t: 's' };
+                sheet['P' + rowIndex] = { v: (newData.implementationDate[rowIndex - 2]).toString, t: 's' };
                 sheet['Q' + rowIndex] = { v: newData.amt[rowIndex - 2], t: 's' };
                 sheet['R' + rowIndex] = { v: newData.bcp[rowIndex - 2], t: 's' };
                 sheet['S' + rowIndex] = { v: newData.comment[rowIndex - 2], t: 's' };
@@ -66,7 +66,7 @@ class BandwidthModel {
     }
     
 
-    static async fetchLocations() {
+    /*static async fetchLocations() {
         try {
             const excelData = await this.readExcel();
             let locations = Object.keys(excelData);
@@ -77,9 +77,9 @@ class BandwidthModel {
             console.error('Error fetching locations:', error);
             throw error;
         }
-    }
+    }*/
 
-    static async fetchLocationData(location) {
+    /*static async fetchLocationData(location) {
         try {
             // Convert location to uppercase
             location = location.toUpperCase();
@@ -90,7 +90,7 @@ class BandwidthModel {
             console.error(`Error fetching data for location ${location}:`, error);
             throw error;
         }
-    }
+    }*/
 }
 
 export default BandwidthModel;
