@@ -1,4 +1,5 @@
 import xlsx from 'xlsx'; // Import xlsx library
+import ExcelJS from 'exceljs';
 import excelConfig from '../../config/excel.config.js'; // Import excelConfig
 
 class BandwidthModel {
@@ -56,7 +57,7 @@ class BandwidthModel {
             }
 
             // Save the workbook with updated data
-            xlsx.writeFile(workbook, excelConfig.filePath);
+            await xlsx.writeFile(workbook, excelConfig.filePath);
     
             return true; // Indicates successful update
         } catch (error) {
@@ -64,6 +65,48 @@ class BandwidthModel {
             throw error;
         }
     }  
+
+    static async addDataInExcel(location, newData) {
+        try {
+            // Load existing workbook or create a new one
+            const workbook = new ExcelJS.Workbook();
+            await workbook.xlsx.readFile(excelConfig.filePath);
+
+            // Get the worksheet based on location or create a new one if not found
+            let worksheet = workbook.getWorksheet(location);
+
+            // Add new row with data
+            const newRow = worksheet.addRow([
+                newData.month,
+                newData.projectName,
+                newData.status,
+                newData.facility.toUpperCase(),
+                newData.tower,
+                newData.bu,
+                newData.subnet,
+                newData.pat,
+                newData.pidb,
+                newData.gdcn,
+                newData.partition,
+                newData.isp,
+                newData.bw,
+                newData.wbse,
+                newData.rfc,
+                newData.implementationDate,
+                newData.amt,
+                newData.bcp,
+                newData.comments
+            ]);
+
+            // Save the workbook
+            await workbook.xlsx.writeFile(excelConfig.filePath);
+
+            return true; // Indicates successful addition
+        } catch (error) {
+            console.error('Error adding data to Excel:', error);
+            throw error;
+        }  
+    }
 }
 
 export default BandwidthModel;

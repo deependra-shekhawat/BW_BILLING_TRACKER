@@ -6,7 +6,7 @@ const bandwidthRouter = express.Router();
 // Define user routes
 bandwidthRouter.get('/', BandwidthController.fetchLocationData);
 bandwidthRouter.post('/update', BandwidthController.updateData);
-//bandwidthRouter.post('/delete', BandwidthController.deleteData);
+bandwidthRouter.post('/add', BandwidthController.addData);
 
 
 export default bandwidthRouter;

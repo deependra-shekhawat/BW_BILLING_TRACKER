@@ -4,21 +4,23 @@ class BandwidthController {
     // Function to update data from Excel
     static async updateData(req, res) {
         const newData = req.body; // Assuming new data is sent in the request body
-        let location = newData.facility[0];
-        location = location.replace(/\d+$/, '');
-        req.query.location = location.toUpperCase(); // Convert location to uppercase
-        if (!newData.selectedRows || newData.selectedRows.length < 1) {
-            req.flash('error', 'Please select at least one entry to update');
-            return BandwidthController.fetchLocationData(req, res);
-        }
-        try {
-            // Update data in Excel
-            await BandwidthModel.updateExcel(location.toUpperCase(), newData);
-            req.flash('success', 'Data updated successfully');
-            return BandwidthController.fetchLocationData(req, res);
-        } catch (error) {
-            console.error('Error updating data:', error);
-            return res.status(500).send('Internal Server Error');
+        if(newData.facility){
+            let location = newData.facility[0];
+            location = location.replace(/\d+$/, '');
+            req.query.location = location.toUpperCase(); // Convert location to uppercase
+            if (!newData.selectedRows || newData.selectedRows.length < 1) {
+                req.flash('error', 'Please select at least one entry to update');
+                return BandwidthController.fetchLocationData(req, res);
+            }
+            try {
+                // Update data in Excel
+                await BandwidthModel.updateExcel(location.toUpperCase(), newData);
+                req.flash('success', 'Data updated successfully');
+                return BandwidthController.fetchLocationData(req, res);
+            } catch (error) {
+                console.error('Error updating data:', error);
+                return res.status(500).send('Internal Server Error');
+            }
         }
     }
 
@@ -42,6 +44,23 @@ class BandwidthController {
         } catch (error) {
             console.error(`Error fetching data for location ${req.query.location}:`, error);
             throw error;
+        }
+    }
+
+    // Function to add data to Excel
+    static async addData(req, res) {
+        try {
+            const newData = req.body; // Assuming new data is sent in the request body
+            //console.log(req.body);
+            const location = newData.location.toUpperCase(); // Convert location to uppercase
+            await BandwidthModel.addDataInExcel(location, newData);
+            req.flash('success', 'Data added successfully');
+            req.query.location = location;
+            return BandwidthController.fetchLocationData(req, res);
+        } catch (error) {
+            console.error('Error adding data:', error);
+            req.flash('error', 'Failed to add data');
+            return res.status(500).send('Internal Server Error');
         }
     }
 }
