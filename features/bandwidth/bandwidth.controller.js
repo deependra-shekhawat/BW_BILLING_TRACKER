@@ -44,29 +44,6 @@ class BandwidthController {
             throw error;
         }
     }
-
-    // static async deleteData(req, res) {
-    //     const { selectedRows, location} = req.body;
-    //     req.query.location = location;
-
-    //     if (!selectedRows || selectedRows.length < 1) {
-    //         console.log(selectedRows, req.body);
-    //         return BandwidthController.fetchLocationData(req, res);
-    //     }
-
-    //     try {
-
-    //         console.log(selectedRows, req.body);
-    //         await BandwidthModel.deleteExcelRows(location, selectedRows);
-    //         req.flash('success', 'Data deleed successfully');
-    //         return BandwidthController.fetchLocationData(req, res);
-            
-    //     } catch (error) {
-    //         console.error('Error deleting data:', error);
-    //         return res.status(500).send('Internal Server Error');
-    //     }
-    // }
-
 }
 
 export default BandwidthController;

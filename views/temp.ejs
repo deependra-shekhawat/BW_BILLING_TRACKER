@@ -1,84 +1,236 @@
-
-<div class="table-responsive">
-  <table class="table table-bordered table-striped table-hover">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Month</th>
-        <th scope="col">Project Name</th>
-        <th scope="col">Status</th>
-        <th scope="col">Facility</th>
-        <th scope="col">Tower</th>
-        <th scope="col">BU</th>
-        <th scope="col">Subnet</th>
-        <th scope="col">PAT IP</th>
-        <th scope="col">PIDB</th>
-        <th scope="col">GDCN ID</th>
-        <th scope="col">Partition Name</th>
-        <th scope="col">ISP</th>
-        <th scope="col">Internet Bandwidth (in MB)</th>
-        <th scope="col">WBSe</th>
-        <th scope="col">RFC</th>
-        <th scope="col">Implementation Date</th>
-        <th scope="col">AMT POC</th>
-        <th scope="col">BCP Bandwidth</th>
-        <th scope="col">Comments</th>
-      </tr>
-    </thead>
-    <tbody id="tableBody">
-      <% if(locationData && locationData.length > 0) { %>
-        <% locationData.forEach((item, index) => { %>
-          
-          <tr>
-            <th scope="row">
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-              <%= index + 1 %>
-            </div>
-            </th>
-            <td>
-              <select aria-label="month" value="<%= item.Month %>">
-                <% const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']; %>
-                <% months.forEach(month => { %>
-                  <option value="<%= month %>" <% if(month === item.Month) { %> selected <% } %>><%= month %></option>
-                <% }); %>
-              </select>
-            </td>
-            <td><input type="text" placeholder="Project Name" aria-label="projectName" id="projectName" value="<%= item['Project Name'] %>"></td>
-            <td>
-              <select aria-label="status">
-                <option value="Live" <% if(item.Status === 'Live') { %> selected <% } %>>Live</option>
-                <option value="Decommissioned" <% if(item.Status === 'Decommissioned') { %> selected <% } %>>Decommissioned</option>
-              </select>
-            </td>
-            <td><input type="text" placeholder="Facility" aria-label="facility" id="facility" value="<%= item.Facility %>"></td>
-            <td><input type="text" placeholder="Tower" aria-label="tower" id="tower" value="<%= item.Tower %>"></td>
-            <td><input type="text" placeholder="BU" aria-label="bu" id="bu" value="<%= item.BU %>"></td>
-            <td><input type="text" placeholder="Subnet" aria-label="subnet" id="subnet" value="<%= item.Subnet %>"></td>
-            <td><input type="text" placeholder="PAT IP" aria-label="pat" id="pat" value="<%= item['PAT IP'] %>"></td>
-            <td><input type="text" placeholder="PIDB" aria-label="pidb" id="pidb" value="<%= item.PIDB %>"></td>
-            <td><input type="text" placeholder="GDCN ID" aria-label="gdcn" id="gdcn" value="<%= item.GDCN %>"></td>
-            <td><input type="text" placeholder="Partition Name" aria-label="partition" id="partition" value="<%= item['Partition Name'] %>"></td>
-            <td><input type="text" placeholder="ISP" aria-label="isp" id="isp" value="<%= item.ISP %>"></td>
-            <td><input type="text" placeholder="Internet Bandwidth (in MB)" aria-label="bw" id="bw" value="<%= item['Internet Bandwidth (in MB)'] %>"></td>
-            <td><input type="text" placeholder="WBSe" aria-label="wbse" id="wbse" value="<%= item.WBSe %>"></td>
-            <td><input type="text" placeholder="RFC" aria-label="rfc" id="rfc" value="<%= item.RFC %>"></td>
-            <td><input type="text" placeholder="Implementation Date" aria-label="implementationDate" id="implementationDate" value="<%= item['Implementation Date'] %>"></td>
-            <td><input type="text" placeholder="AMT POC" aria-label="amt" id="amt" value="<%= item['AMT POC'] %>"></td>
-            <td>
-              <select aria-label="bcp">
-                <option value="Yes" <% if(item['BCP Bandwidth'] === 'Yes') { %> selected <% } %>>Yes</option>
-                <option value="No" <% if(item['BCP Bandwidth'] === 'No') { %> selected <% } %>>No</option>
-              </select>
-            </td>
-            <td><textarea id="comment" rows="1" cols="50"><%= item.Comments %></textarea></td>
-          </tr>
-        <% }); %>
-      <% } else { %>
+<form action="/bandwidth/update" method="POST" id="dataTableForm">
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover table-resizable resizable resizable-table">
+      <thead>
         <tr>
-          <td colspan="19">No data available for selected location</td>
+          <th scope="col">#</th>
+          <th scope="col">Month</th>
+          <th scope="col">Project Name</th>
+          <th scope="col">Status</th>
+          <th scope="col">Facility</th>
+          <th scope="col">Tower</th>
+          <th scope="col">BU</th>
+          <th scope="col">Subnet</th>
+          <th scope="col">PAT IP</th>
+          <th scope="col">PIDB</th>
+          <th scope="col">GDCN ID</th>
+          <th scope="col">Partition Name</th>
+          <th scope="col">ISP</th>
+          <th scope="col">Internet Bandwidth (in MB)</th>
+          <th scope="col">WBSe</th>
+          <th scope="col">RFC</th>
+          <th scope="col">Implementation Date</th>
+          <th scope="col">AMT POC</th>
+          <th scope="col">BCP Bandwidth</th>
+          <th scope="col">Comments</th>
         </tr>
-      <% } %>
-    </tbody>
-  </table>
-</div>
+      </thead>
+      <tbody id="tableBody">
+        <% if(locationData && locationData.length > 0) { %>
+          <% locationData.forEach((item, index) => { %>
+            <tr>
+              <td>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" name="selectedRows[]" id="checkbox<%= index + 2 %>" value="<%= index + 2 %>">
+                  <%= index + 2 %>
+                </div>
+              </td>
+              <td>
+                <select name="month[]" aria-label="month">
+                  <% const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']; %>
+                  <% months.forEach(month => { %>
+                    <option value="<%= month %>" <% if(month === item.Month) { %> selected <% } %>><%= month %></option>
+                  <% }); %>
+                </select>
+              </td>
+              <td>
+                <input type="text" name="projectName[]" placeholder="Project Name" style="width:300px" aria-label="projectName" value="<%= item['Project Name'] %>">
+              </td>
+              <td>
+                <select name="status[]" aria-label="status">
+                  <option value="Live" <% if(item.Status === 'Live') { %> selected <% } %>>Live</option>
+                  <option value="Decommissioned" <% if(item.Status === 'Decommissioned') { %> selected <% } %>>Decommissioned</option>
+                </select>
+              </td>
+              <td>
+                <input type="text" name="facility[]" placeholder="Facility" style="width:100px;" aria-label="facility" value="<%= item.Facility %>">
+              </td>
+              <td>
+                <input type="text" name="tower[]" placeholder="Tower" style="width:40px" aria-label="tower" value="<%= item.Tower %>">
+              </td>
+              <td>
+                <input type="text" name="bu[]" placeholder="BU" style="width:100px" aria-label="bu" value="<%= item.BU %>">
+              </td>
+              <td>
+                <input type="text" name="subnet[]" placeholder="Subnet" style="width:150px" aria-label="subnet" value="<%= item.Subnet %>">
+              </td>
+              <td>
+                <input type="text" name="pat[]" placeholder="PAT IP" style="width:150px" aria-label="pat" value="<%= item['PAT IP'] %>">
+              </td>
+              <td>
+                <input type="text" name="pidb[]" placeholder="PIDB" style="width:100px" aria-label="pidb" value="<%= item.PIDB %>">
+              </td>
+              <td>
+                <input type="text" name="gdcn[]" placeholder="GDCN ID" style="width:100px" aria-label="gdcn" value="<%= item.GDCN %>">
+              </td>
+              <td>
+                <input type="text" name="partition[]" placeholder="Partition Name" style="width:300px" aria-label="partition" value="<%= item['Partition Name'] %>">
+              </td>
+              <td>
+                <input type="text" name="isp[]" placeholder="ISP" style="width:100px" aria-label="isp" value="<%= item.ISP %>">
+              </td>
+              <td>
+                <input type="text" name="bw[]" placeholder="Internet Bandwidth (in MB)" style="width:90px" aria-label="bw" value="<%= item['Internet Bandwidth (in MB)'] %>">
+              </td>
+              <td>
+                <input type="text" name="wbse[]" placeholder="WBSe" style="width:100px" aria-label="wbse" value="<%= item.WBSe %>">
+              </td>
+              <td>
+                <input type="text" name="rfc[]" placeholder="RFC" style="width:100px" aria-label="rfc" value="<%= item.RFC %>">
+              </td>
+              <td>
+                <input type="text" name="implementationDate[]" placeholder="Implementation Date" style="width:100px" aria-label="implementationDate" value="<%= (typeof item['Implementation Date']) == 'number' ? (new Date(item['Implementation Date']).toLocaleDateString()) : (String(item['Implementation Date'])) %>">
+				</td>
+              <td>
+                <input type="text" name="amt[]" placeholder="AMT POC" aria-label="amt" value="<%= item['AMT POC'] %>">
+              </td>
+              <td>
+				  <select name="bcp[]" aria-label="bcp">
+					  <option value="No"
+						  <% if(item['BCP'] && item['BCP'].toString().toLowerCase() === 'no') { %> selected <% } %>>No</option>
+					  <option value="Yes"
+						  <% if(item['BCP'] && item['BCP'].toString().toLowerCase() === 'yes') { %> selected <% } %>>Yes</option>
+				  </select>
+			  </td>
+              <td>
+                <textarea name="comment[]" rows="2" cols="80"><%= item.Comments %></textarea>
+              </td>
+            </tr>
+            
+          <% }); %>
+        <% } else { %>
+          <tr>
+            <td colspan="19">No data available for selected location</td>
+          </tr>
+        <% } %>
+      </tbody>
+      <tfoot>
+        <tr class="bg-secondary bg-gradient fixed-bottom">
+          <td style="width:20vw;">
+            <div class="center1">
+              <button type="button" class="btn btn-success btn-copy" style="width: 90%; font-size: 12px; padding: 2px 0; position: relative;"><i class="bi bi-clipboard"></i>&nbsp;Copy</button>
+            </div>
+          </td>
+          
+          <td style="width:80vw;">
+            <div class="center1">
+              <button type="submit" class="btn btn-primary" style="width: 80%; font-size: 12px; padding: 2px 0; position: relative;">Submit Changes</button>
+            </div>
+          </td>
+          <!-- <td style="width:20vw;">
+            <div class="center1">
+              <button type="button" class="btn btn-danger" style="width: 90%; font-size: 12px; padding: 2px 0; position: relative;" onclick="deleteRows()"><i class="bi bi-trash"></i>&nbsp;Delete</button>
+            </div>
+          </td> -->
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</form>
+
+
+<!-- <script>
+  async function deleteRows() {
+    // Get the selected rows
+    const selectedRows = Array.from(document.querySelectorAll('input[name="selectedRows[]"]:checked')).map(row => row.value);
+    const location = document.getElementById('location').value;
+
+    if(!selectedRows || selectedRows.length < 1){
+        alert('Select at leat one row to delete');
+        return;
+    }
+
+    // Make an AJAX POST request to /bandwidth/delete
+    await fetch('/bandwidth/delete', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        selectedRows: selectedRows,
+        location: location,
+      })
+    })
+  }
+</script> -->
+
+
+<!-- // static async deleteExcelRows(location, selectedRows) {
+  //     try {
+  //         const workbook = xlsx.readFile(excelConfig.filePath);
+  
+  //         if (!workbook.Sheets.hasOwnProperty(location)) {
+  //             throw new Error(`Sheet with name ${location} not found in Excel file.`);
+  //         }
+  
+  //         const sheet = workbook.Sheets[location];
+  //         const range = xlsx.utils.decode_range(sheet['!ref']);
+  //         const maxRow = range.e.r; // Get the index of the last row
+  
+  //         // Loop through the selected rows and shift remaining rows up
+  //         for (const rowIndex of selectedRows) {
+  //             // Shift rows up from the deleted row index to the end of the sheet
+  //             for (let row = rowIndex; row < maxRow; row++) {
+  //                 for (let col = range.s.c; col <= range.e.c; col++) {
+  //                     const cellAddressCurrent = xlsx.utils.encode_cell({ r: row, c: col });
+  //                     const cellAddressNext = xlsx.utils.encode_cell({ r: row + 1, c: col });
+  //                     sheet[cellAddressCurrent] = sheet[cellAddressNext]; // Shift data up
+  //                 }
+  //             }
+  //         }
+  
+  //         // Clear the data in the last row after shifting
+  //         for (let col = range.s.c; col <= range.e.c; col++) {
+  //             const cellAddress = xlsx.utils.encode_cell({ r: maxRow, c: col });
+  //             sheet[cellAddress] = { v: '', t: 's' }; // Clear the value in the last row
+  //         }
+  
+  //         // Update the range to reflect the shifted rows
+  //         range.e.r -= selectedRows.length;
+  
+  //         // Save the workbook with updated data
+  //         xlsx.writeFile(workbook, excelConfig.filePath);
+  
+  //         return true; // Indicates successful deletion
+  //     } catch (error) {
+  //         console.error('Error deleting Excel rows:', error);
+  //         throw error;
+  //     }
+  // } 
+
+
+  
+    // static async deleteData(req, res) {
+    //     const { selectedRows, location} = req.body;
+    //     req.query.location = location;
+
+    //     if (!selectedRows || selectedRows.length < 1) {
+    //         console.log(selectedRows, req.body);
+    //         return BandwidthController.fetchLocationData(req, res);
+    //     }
+
+    //     try {
+
+    //         console.log(selectedRows, req.body);
+    //         await BandwidthModel.deleteExcelRows(location, selectedRows);
+    //         req.flash('success', 'Data deleed successfully');
+    //         return BandwidthController.fetchLocationData(req, res);
+            
+    //     } catch (error) {
+    //         console.error('Error deleting data:', error);
+    //         return res.status(500).send('Internal Server Error');
+    //     }
+    // }
+
+  -->
+

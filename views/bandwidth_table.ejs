@@ -127,39 +127,8 @@
               <button type="submit" class="btn btn-primary" style="width: 80%; font-size: 12px; padding: 2px 0; position: relative;">Submit Changes</button>
             </div>
           </td>
-          <!-- <td style="width:20vw;">
-            <div class="center1">
-              <button type="button" class="btn btn-danger" style="width: 90%; font-size: 12px; padding: 2px 0; position: relative;" onclick="deleteRows()"><i class="bi bi-trash"></i>&nbsp;Delete</button>
-            </div>
-          </td> -->
         </tr>
       </tfoot>
     </table>
   </div>
 </form>
-
-
-<script>
-  async function deleteRows() {
-    // Get the selected rows
-    const selectedRows = Array.from(document.querySelectorAll('input[name="selectedRows[]"]:checked')).map(row => row.value);
-    const location = document.getElementById('location').value;
-
-    if(!selectedRows || selectedRows.length < 1){
-        alert('Select at leat one row to delete');
-        return;
-    }
-
-    // Make an AJAX POST request to /bandwidth/delete
-    await fetch('/bandwidth/delete', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        selectedRows: selectedRows,
-        location: location,
-      })
-    })
-  }
-</script>
