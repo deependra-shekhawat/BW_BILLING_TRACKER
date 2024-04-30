@@ -122,9 +122,16 @@
             </div>
           </td>
           
-          <td style="width:80vw;">
+          <td style="width:60vw;">
             <div class="center1">
               <button type="submit" class="btn btn-primary" style="width: 80%; font-size: 12px; padding: 2px 0; position: relative;">Submit Changes</button>
+            </div>
+          </td>
+          <td style="width:20vw;">
+            <div class="center1">
+            <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn btn-success me-2" style="width: 80%; font-size: 12px; padding: 2px 0; position: relative;">
+              Add Entry
+            </button>
             </div>
           </td>
         </tr>
@@ -132,3 +139,145 @@
     </table>
   </div>
 </form>
+
+<!-- Modal for Adding new entry -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title bold" id="staticBackdropLabel">
+          Add New Entry
+        </h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="addBandwidthForm" action="/bandwidth/add" method="POST" class="row g-3">
+          <div class="col-md-4">
+            <label for="location" >Location:</label>
+            <select id="location" name="location">
+              <% if(selectedLocation) { %>
+                <option class="dropdown-item" value="<%= selectedLocation %>" selected><%= selectedLocation %></option>
+              <% } else{ %>
+                <option class="dropdown-item">Select Location</option>
+              <% } %>
+              <% locations.forEach(location => { %>
+                <option class="dropdown-item" value="<%= location %>"><%= location %></option>
+              <% }); %>
+            </select>
+          </div>
+          
+          <div class="col-md-4">
+            <label for="month">Month:</label>
+            <select name="month" id="month">
+              <% const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']; %>
+              <% months.forEach(month => { %>
+                <option value="<%= month %>"><%= month %></option>
+              <% }); %>
+            </select>
+          </div>
+          
+          <div class="col-md-4">
+            <label for="projectName">Project Name:</label>
+            <input type="text" id="projectName" name="projectName" required>
+          </div>
+          
+          <div class="col-md-4">
+            <label for="status">Status:</label>
+            <select id="status" name="status" required>
+                <option value="Live">Live</option>
+                <option value="Decommissioned">Decommissioned</option>
+            </select>
+          </div>
+          
+          <div class="col-md-4">
+            <label for="facility">Facility:</label>
+            <input type="text" id="facility" name="facility" required>
+          </div>
+          
+          <div class="col-md-4">
+            <label for="tower">Tower:</label>
+            <input type="text" id="tower" name="tower" required>
+          </div>
+          
+          <div class="col-md-4">
+            <label for="bu">BU:</label>
+            <input type="text" id="bu" name="bu" required>
+          </div>
+          
+      
+          <div class="col-md-4">
+            <label for="subnet">Subnet:</label>
+            <input type="text" id="subnet" name="subnet" required>
+          </div>
+          
+          <div class="col-md-4">
+            <label for="pat">PAT IP:</label>
+            <input type="text" id="pat" name="pat" required>
+          </div>
+          
+          <div class="col-md-4">
+            <label for="pidb">PIDB:</label>
+            <input type="text" id="pidb" name="pidb" required>
+          </div>
+          
+          <div class="col-md-4">
+            <label for="gdcn">GDCN ID:</label>
+            <input type="text" id="gdcn" name="gdcn" required>
+          </div>
+          
+          <div class="col-md-4">
+            <label for="partition">Partition Name:</label>
+            <input type="text" id="partition" name="partition" required>
+          </div>
+          
+          <div class="col-md-4">
+            <label for="isp">ISP:</label>
+            <input type="text" id="isp" name="isp" required>
+          </div>
+          
+          <div class="col-md-4">
+            <label for="bw">Internet Bandwidth (in MB):</label>
+            <input type="number" id="bw" name="bw" style="width: 20%;" required>
+          </div>
+          
+          <div class="col-md-4">
+            <label for="wbse">WBSe:</label>
+            <input type="text" id="wbse" name="wbse" required>
+          </div>
+          
+          <div class="col-md-4">
+            <label for="rfc">RFC:</label>
+            <input type="text" id="rfc" name="rfc" required>
+          </div>
+          
+          <div class="col-md-4">
+            <label for="implementationDate">Implementation Date:</label>
+            <input type="text" id="implementationDate" name="implementationDate" style="width: 40%;" required>
+          </div>
+          
+          <div class="col-md-4">
+            <label for="amt">AMT POC:</label>
+            <input type="text" id="amt" name="amt" required>
+          </div>
+          
+          <div class="col-md-4">
+            <label for="bcp">BCP Bandwidth:</label>
+            <select id="bcp" name="bcp" required>
+              <option value="No">No</option>
+              <option value="Yes">Yes</option>
+            </select>
+          </div>
+          
+          <div class="col-md-4">
+            <label for="comments">Comments:</label><br>
+            <textarea id="comments" name="comments" rows="3" cols="50"></textarea>
+          </div>
+          
+      
+          <button type="submit">Add Bandwidth</button>
+      </form>      
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal for Adding new entry -->
