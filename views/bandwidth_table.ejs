@@ -37,7 +37,7 @@
               </td>
               <td>
                 <select name="month[]" aria-label="month">
-                  <% const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']; %>
+                  <% const months = ['','Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']; %>
                   <% months.forEach(month => { %>
                     <option value="<%= month %>" <% if(month === item.Month) { %> selected <% } %>><%= month %></option>
                   <% }); %>
@@ -169,7 +169,7 @@
           <div class="col-md-4">
             <label for="month">Month:</label>
             <select name="month" id="month">
-              <% const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']; %>
+              <% const months = ['','Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']; %>
               <% months.forEach(month => { %>
                 <option value="<%= month %>"><%= month %></option>
               <% }); %>

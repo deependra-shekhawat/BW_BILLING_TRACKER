@@ -68,11 +68,11 @@ class BandwidthModel {
 
     static async addDataInExcel(location, newData) {
         try {
-            // Load existing workbook or create a new one
+            // Load existing workbook
             const workbook = new ExcelJS.Workbook();
             await workbook.xlsx.readFile(excelConfig.filePath);
 
-            // Get the worksheet based on location or create a new one if not found
+            // Get the worksheet based on location 
             let worksheet = workbook.getWorksheet(location);
 
             // Add new row with data
