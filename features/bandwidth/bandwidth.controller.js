@@ -1,4 +1,6 @@
+import path from 'path';
 import BandwidthModel from "./bandwidth.model.js";
+import excelConfig from '../../config/excel.config.js'; // Import excelConfig
 
 class BandwidthController {
     // Function to update data from Excel
@@ -61,6 +63,28 @@ class BandwidthController {
             console.error('Error adding data:', error);
             req.flash('error', 'Failed to add data');
             return res.status(500).send('Internal Server Error');
+        }
+    }
+
+    // Function to download the Excel file
+    static async downloadExcel(req, res) {
+        try {
+            // Get the file path of the Excel file to download
+            //const filePath = new URL(excelConfig.filePath, import.meta.url).pathname;
+            // const __filename = new URL(import.meta.url).pathname;
+            // const __dirname = path.dirname(__filename)
+            // const filePath = path.join(__dirname + '..', '..', 'python_script','bw_billing_tracker.xlsx');
+            // console.log("file:",filePath);
+            
+            // Set headers for the response
+            res.setHeader('Content-Disposition', 'attachment; filename=bw-billling-tracker.xlsx');
+            res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+
+            res.sendFile('bw_billing_tracker.xlsx', { root: 'C:/Users/deepe/OneDrive/Documents/NodeJS_CodingNinja/BW_BILLING_TRACKER/python_script' });
+
+        } catch (error) {
+            console.error('Error downloading Excel:', error);
+            res.status(500).send('Internal Server Error');
         }
     }
 }

@@ -7,6 +7,7 @@ const bandwidthRouter = express.Router();
 bandwidthRouter.get('/', BandwidthController.fetchLocationData);
 bandwidthRouter.post('/update', BandwidthController.updateData);
 bandwidthRouter.post('/add', BandwidthController.addData);
+bandwidthRouter.get('/download-excel', BandwidthController.downloadExcel);
 
 
 export default bandwidthRouter;
