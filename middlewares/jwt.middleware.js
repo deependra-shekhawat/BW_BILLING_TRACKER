@@ -37,7 +37,8 @@ const jwtAuth = (req, res, next) => {
     } catch (err) {
         // 4. return error.
         console.error(err);
-        return res.status(401).send('Unauthorized');
+        return res.render('layout', { userName: null, messages: req.flash() ,excelData: null });
+        //return res.status(401).send('Unauthorized');
     }
 };
 
