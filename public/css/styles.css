@@ -7,3 +7,17 @@ table select, table input {
   display: flex;
   justify-content: center;
 }
+
+.dot {
+    height: 0.60rem;
+    width: 0.60rem;
+    margin-top: 0.7em;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 2px;
+}
+
+.dot-text {
+    font-size: 0.80rem;
+    margin-top: 0.4em;
+}
