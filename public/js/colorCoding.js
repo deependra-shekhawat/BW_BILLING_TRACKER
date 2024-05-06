@@ -8,14 +8,14 @@ function applyRowColor() {
       // Check conditions and apply background color
       if (status === 'Live') {
         if (comments.includes('downgrade')) {
-          row.style.backgroundColor = 'yellow';
+            row.style.backgroundColor = '#FCF55F';
         } else if (comments.includes('upgrade')) {
           row.style.backgroundColor = 'darkgreen';
         } else {
           row.style.backgroundColor = 'lightgreen';
         }
       } else if (status === 'Decommissioned') {
-        row.style.backgroundColor = 'red';
+          row.style.backgroundColor = '#E34234';
       }
     });
   }
