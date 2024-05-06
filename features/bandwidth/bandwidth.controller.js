@@ -74,13 +74,17 @@ class BandwidthController {
             // const __filename = new URL(import.meta.url).pathname;
             // const __dirname = path.dirname(__filename)
             // const filePath = path.join(__dirname + '..', '..', 'python_script','bw_billing_tracker.xlsx');
-            // console.log("file:",filePath);
-            
+            const currentDirectory = process.cwd();
+
+            const fileLocation = path.join(currentDirectory, 'python_script');
+
+            //console.log("pwd:", currentDirectory);
+
             // Set headers for the response
             res.setHeader('Content-Disposition', 'attachment; filename=bw-billling-tracker.xlsx');
             res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
 
-            res.sendFile('bw_billing_tracker.xlsx', { root: 'C:/Users/deepe/OneDrive/Documents/NodeJS_CodingNinja/BW_BILLING_TRACKER/python_script' });
+            res.sendFile('bw_billing_tracker.xlsx', { root: fileLocation });
 
         } catch (error) {
             console.error('Error downloading Excel:', error);
