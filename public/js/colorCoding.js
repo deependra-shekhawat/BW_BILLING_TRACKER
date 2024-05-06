@@ -10,7 +10,7 @@ function applyRowColor() {
         if (comments.includes('downgrade')) {
             row.style.backgroundColor = '#FCF55F';
         } else if (comments.includes('upgrade')) {
-          row.style.backgroundColor = 'darkgreen';
+            row.style.backgroundColor = '#FFD700';
         } else {
           row.style.backgroundColor = 'lightgreen';
         }
