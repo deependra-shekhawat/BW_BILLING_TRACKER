@@ -2,10 +2,14 @@ import express from 'express';
 import session from 'express-session';
 import dotenv from 'dotenv';
 import cookieParser from 'cookie-parser';
+import expressWinston from 'express-winston';
 import flash from 'connect-flash';
 import userRouter from './features/users/user.route.js';
 import jwtAuth from './middlewares/jwt.middleware.js';
 import bandwidthRouter from './features/bandwidth/bandwidth.route.js';
+import { defaultLogger, errorLogger } from './middlewares/logger.js';
+import { errorHandlerMiddleware } from './middlewares/errorHandler.js';
+import { invalidRoutesHandlerMiddleware } from './middlewares/invalidRoutes.middleware.js';
 
 // 2. Create Server
 const server = express();
@@ -28,6 +32,11 @@ server.use(session({
 // Using connect-flash to display flash notification in FE
 server.use(flash());
 
+server.use(expressWinston.logger({
+    winstonInstance: defaultLogger,
+    statusLevels: true
+}));
+
 // Set EJS as the view engine
 server.set('view engine', 'ejs');
 
@@ -48,6 +57,13 @@ server.use(jwtAuth);
 
 // Mount user routes
 server.use('/bandwidth', bandwidthRouter);
+
+// Middleware to handle errors
+server.use(errorHandlerMiddleware);
+
+server.use(invalidRoutesHandlerMiddleware);
+
+server.use(errorLogger);
 
 // 5. Specify port.
 server.listen(8000, () => {

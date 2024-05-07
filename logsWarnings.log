@@ -1,0 +1,282 @@
+{
+  level: 'warn',
+  message: 'HTTP GET /public/Accenture-Emblem.png',
+  metadata: {
+    meta: {
+      req: {
+        url: '/public/Accenture-Emblem.png',
+        headers: {
+          host: 'localhost:8000',
+          connection: 'keep-alive',
+          'sec-ch-ua': '"Chromium";v="124", "Google Chrome";v="124", "Not-A.Brand";v="99"',
+          'sec-ch-ua-mobile': '?0',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+          'sec-ch-ua-platform': '"Windows"',
+          accept: 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
+          'sec-fetch-site': 'same-origin',
+          'sec-fetch-mode': 'no-cors',
+          'sec-fetch-dest': 'image',
+          referer: 'http://localhost:8000/',
+          'accept-encoding': 'gzip, deflate, br, zstd',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AO-RCKiVEGk2TFr2R7pzwDmD2sv-w-2px.qVe1Yyov2KUJt8vH9G%2F4jNq4ct8OLr1mF9HATOzyQPc'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/public/Accenture-Emblem.png',
+        query: {}
+      },
+      res: { statusCode: 401 },
+      responseTime: 1
+    },
+    timestamp: '2024-05-07T11:55:32.288Z'
+  }
+}
+{
+  level: 'warn',
+  message: 'HTTP GET /public/Accenture-Emblem.png',
+  metadata: {
+    meta: {
+      req: {
+        url: '/public/Accenture-Emblem.png',
+        headers: {
+          host: 'localhost:8000',
+          connection: 'keep-alive',
+          'sec-ch-ua': '"Chromium";v="124", "Google Chrome";v="124", "Not-A.Brand";v="99"',
+          'sec-ch-ua-mobile': '?0',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+          'sec-ch-ua-platform': '"Windows"',
+          accept: 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
+          'sec-fetch-site': 'same-origin',
+          'sec-fetch-mode': 'no-cors',
+          'sec-fetch-dest': 'image',
+          referer: 'http://localhost:8000/',
+          'accept-encoding': 'gzip, deflate, br, zstd',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AO-RCKiVEGk2TFr2R7pzwDmD2sv-w-2px.qVe1Yyov2KUJt8vH9G%2F4jNq4ct8OLr1mF9HATOzyQPc'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/public/Accenture-Emblem.png',
+        query: {}
+      },
+      res: { statusCode: 401 },
+      responseTime: 0
+    },
+    timestamp: '2024-05-07T11:55:35.478Z'
+  }
+}
+{
+  level: 'warn',
+  message: 'HTTP GET /public/Accenture-Emblem.png',
+  metadata: {
+    meta: {
+      req: {
+        url: '/public/Accenture-Emblem.png',
+        headers: {
+          host: 'localhost:8000',
+          connection: 'keep-alive',
+          'sec-ch-ua': '"Chromium";v="124", "Google Chrome";v="124", "Not-A.Brand";v="99"',
+          'sec-ch-ua-mobile': '?0',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+          'sec-ch-ua-platform': '"Windows"',
+          accept: 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
+          'sec-fetch-site': 'same-origin',
+          'sec-fetch-mode': 'no-cors',
+          'sec-fetch-dest': 'image',
+          referer: 'http://localhost:8000/bandwidth',
+          'accept-encoding': 'gzip, deflate, br, zstd',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AO-RCKiVEGk2TFr2R7pzwDmD2sv-w-2px.qVe1Yyov2KUJt8vH9G%2F4jNq4ct8OLr1mF9HATOzyQPc; token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXIiOiJ0ZXN0dXNlciIsInBhc3N3b3JkIjoiJDJiJDEyJHJkZGQuS0VvSnY1d3l5TGJtZmRKWGVycmFEYjExN3V6SWx0TWNIemJZREdGZUxham0wQ0RlIn0sImlhdCI6MTcxNTA4Mjk0OCwiZXhwIjoxNzE1MDgzODQ4fQ.xHvS76lzwffbXkD7lKrSxwtQ0jHNN-oHLCCxgTWfEbw'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/public/Accenture-Emblem.png',
+        query: {}
+      },
+      res: { statusCode: 404 },
+      responseTime: 3
+    },
+    timestamp: '2024-05-07T11:55:48.359Z'
+  }
+}
+{
+  level: 'warn',
+  message: 'HTTP GET /gkjhkjhk',
+  metadata: {
+    meta: {
+      req: {
+        url: '/gkjhkjhk',
+        headers: {
+          'content-type': 'application/json',
+          'user-agent': 'PostmanRuntime/7.37.3',
+          accept: '*/*',
+          'postman-token': '9f18ed72-a5a3-4157-b084-29893d6d622e',
+          host: 'localhost:8000',
+          'accept-encoding': 'gzip, deflate, br',
+          connection: 'keep-alive',
+          'content-length': '6',
+          cookie: 'connect.sid=s%3AKw6mTII76tycePlOnZTEQP_cD4RQqwnT.b2Js6byNBT0iIAwXyrAxkP15BgyrkYWTSZgh5lcCMYw; token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXIiOiJ0ZXN0dXNlciIsInBhc3N3b3JkIjoiJDJiJDEyJHJkZGQuS0VvSnY1d3l5TGJtZmRKWGVycmFEYjExN3V6SWx0TWNIemJZREdGZUxham0wQ0RlIn0sImlhdCI6MTcxNTA4NDMwOSwiZXhwIjoxNzE1MDg1MjA5fQ.j6sFgcmNW_EpryKNmMhVKeiuWPnlzCmq-e6Y288_NAY'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/gkjhkjhk',
+        query: {}
+      },
+      res: { statusCode: 404 },
+      responseTime: 8
+    },
+    timestamp: '2024-05-07T12:23:00.213Z'
+  }
+}
+{
+  level: 'warn',
+  message: 'HTTP GET /gkjhkjhk',
+  metadata: {
+    meta: {
+      req: {
+        url: '/gkjhkjhk',
+        headers: {
+          'content-type': 'application/json',
+          'user-agent': 'PostmanRuntime/7.37.3',
+          accept: '*/*',
+          'postman-token': 'f38bff52-8af7-4a79-8207-9b40b6e418ea',
+          host: 'localhost:8000',
+          'accept-encoding': 'gzip, deflate, br',
+          connection: 'keep-alive',
+          'content-length': '6',
+          cookie: 'connect.sid=s%3ABNALY3ysEwCxV3E50PLl6BJFm80ayFD_.5AUIenkXXAcEFnrcEY3rrMxPL9CGMtARcuMh1ZpTa3E; token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXIiOiJ0ZXN0dXNlciIsInBhc3N3b3JkIjoiJDJiJDEyJHJkZGQuS0VvSnY1d3l5TGJtZmRKWGVycmFEYjExN3V6SWx0TWNIemJZREdGZUxham0wQ0RlIn0sImlhdCI6MTcxNTA4NDMwOSwiZXhwIjoxNzE1MDg1MjA5fQ.j6sFgcmNW_EpryKNmMhVKeiuWPnlzCmq-e6Y288_NAY'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/gkjhkjhk',
+        query: {}
+      },
+      res: { statusCode: 404 },
+      responseTime: 13
+    },
+    timestamp: '2024-05-07T12:28:32.209Z'
+  }
+}
+{
+  level: 'error',
+  message: "Error adding data: Cannot read properties of undefined (reading 'toUpperCase')",
+  metadata: {
+    stack: "TypeError: Cannot read properties of undefined (reading 'toUpperCase')\n" +
+      '    at addData (file:///C:/Users/deepe/OneDrive/Documents/NodeJS_CodingNinja/BW_BILLING_TRACKER/features/bandwidth/bandwidth.controller.js:59:47)\n' +
+      '    at Layer.handle [as handle_request] (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+      '    at next (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\route.js:149:13)\n' +
+      '    at Route.dispatch (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\route.js:119:3)\n' +
+      '    at Layer.handle [as handle_request] (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+      '    at C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+      '    at Function.process_params (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+      '    at next (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+      '    at Function.handle (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:175:3)\n' +
+      '    at router (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:47:12)\n' +
+      '    at Layer.handle [as handle_request] (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+      '    at trim_prefix (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:328:13)\n' +
+      '    at C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:286:9\n' +
+      '    at Function.process_params (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+      '    at next (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+      '    at jwtAuth (file:///C:/Users/deepe/OneDrive/Documents/NodeJS_CodingNinja/BW_BILLING_TRACKER/middlewares/jwt.middleware.js:36:9)',
+    timestamp: '2024-05-07T12:54:34.770Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP POST /bandwidth/add',
+  metadata: {
+    meta: {
+      req: {
+        url: '/bandwidth/add',
+        headers: {
+          'content-type': 'application/json',
+          'user-agent': 'PostmanRuntime/7.37.3',
+          accept: '*/*',
+          'postman-token': '17a36219-430a-43f5-891a-617acba27f74',
+          host: 'localhost:8000',
+          'accept-encoding': 'gzip, deflate, br',
+          connection: 'keep-alive',
+          'content-length': '6',
+          cookie: 'connect.sid=s%3AdnMX-jMmMI1YATbm6dYeImJ6VB18qLVA.A8Sws6hRvLD3X%2BV3nVekhY9MJBKIIA6aAyEIVV8Wwt0; token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXIiOiJ0ZXN0dXNlciIsInBhc3N3b3JkIjoiJDJiJDEyJHJkZGQuS0VvSnY1d3l5TGJtZmRKWGVycmFEYjExN3V6SWx0TWNIemJZREdGZUxham0wQ0RlIn0sImlhdCI6MTcxNTA4NjM2OSwiZXhwIjoxNzE1MDg3MjY5fQ.l5mXLonPpir0tQ4_X1pw9jMQl4e1tR2DXtp6ZMqn_1Q'
+        },
+        method: 'POST',
+        httpVersion: '1.1',
+        originalUrl: '/bandwidth/add',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 22
+    },
+    timestamp: '2024-05-07T12:54:34.786Z'
+  }
+}
+{
+  level: 'warn',
+  message: 'HTTP GET /bandwidth/jbgjbkjbkh',
+  metadata: {
+    meta: {
+      req: {
+        url: '/bandwidth/jbgjbkjbkh',
+        headers: {
+          host: 'localhost:8000',
+          connection: 'keep-alive',
+          'sec-ch-ua': '"Chromium";v="124", "Google Chrome";v="124", "Not-A.Brand";v="99"',
+          'sec-ch-ua-mobile': '?0',
+          'sec-ch-ua-platform': '"Windows"',
+          'upgrade-insecure-requests': '1',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+          accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+          'sec-fetch-site': 'none',
+          'sec-fetch-mode': 'navigate',
+          'sec-fetch-user': '?1',
+          'sec-fetch-dest': 'document',
+          'accept-encoding': 'gzip, deflate, br, zstd',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3ASEctsHysaHLNoMFHQTGXiTIjJHD3dk5s.SCFUZI16PdsycVUKQNZsqX%2BNnYEy4C%2F6KwaIW9j2d%2FU; token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXIiOiJ0ZXN0dXNlciIsInBhc3N3b3JkIjoiJDJiJDEyJHJkZGQuS0VvSnY1d3l5TGJtZmRKWGVycmFEYjExN3V6SWx0TWNIemJZREdGZUxham0wQ0RlIn0sImlhdCI6MTcxNTA4ODIwNCwiZXhwIjoxNzE1MDg5MTA0fQ.sorlwnZvWZkW0OxgQCzCfNFM628bA_zNq02OVrQdh1o'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/bandwidth/jbgjbkjbkh',
+        query: {}
+      },
+      res: { statusCode: 404 },
+      responseTime: 2
+    },
+    timestamp: '2024-05-07T13:23:52.348Z'
+  }
+}
+{
+  level: 'warn',
+  message: 'HTTP GET /favicon.ico',
+  metadata: {
+    meta: {
+      req: {
+        url: '/favicon.ico',
+        headers: {
+          host: 'localhost:8000',
+          connection: 'keep-alive',
+          'sec-ch-ua': '"Chromium";v="124", "Google Chrome";v="124", "Not-A.Brand";v="99"',
+          'sec-ch-ua-mobile': '?0',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+          'sec-ch-ua-platform': '"Windows"',
+          accept: 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
+          'sec-fetch-site': 'same-origin',
+          'sec-fetch-mode': 'no-cors',
+          'sec-fetch-dest': 'image',
+          referer: 'http://localhost:8000/bandwidth/jbgjbkjbkh',
+          'accept-encoding': 'gzip, deflate, br, zstd',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3ASEctsHysaHLNoMFHQTGXiTIjJHD3dk5s.SCFUZI16PdsycVUKQNZsqX%2BNnYEy4C%2F6KwaIW9j2d%2FU; token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXIiOiJ0ZXN0dXNlciIsInBhc3N3b3JkIjoiJDJiJDEyJHJkZGQuS0VvSnY1d3l5TGJtZmRKWGVycmFEYjExN3V6SWx0TWNIemJZREdGZUxham0wQ0RlIn0sImlhdCI6MTcxNTA4ODIwNCwiZXhwIjoxNzE1MDg5MTA0fQ.sorlwnZvWZkW0OxgQCzCfNFM628bA_zNq02OVrQdh1o'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/favicon.ico',
+        query: {}
+      },
+      res: { statusCode: 404 },
+      responseTime: 2
+    },
+    timestamp: '2024-05-07T13:23:52.398Z'
+  }
+}

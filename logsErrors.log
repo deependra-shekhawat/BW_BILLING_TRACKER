@@ -1,0 +1,53 @@
+{
+  level: 'error',
+  message: "Error adding data: Cannot read properties of undefined (reading 'toUpperCase')",
+  metadata: {
+    stack: "TypeError: Cannot read properties of undefined (reading 'toUpperCase')\n" +
+      '    at addData (file:///C:/Users/deepe/OneDrive/Documents/NodeJS_CodingNinja/BW_BILLING_TRACKER/features/bandwidth/bandwidth.controller.js:59:47)\n' +
+      '    at Layer.handle [as handle_request] (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+      '    at next (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\route.js:149:13)\n' +
+      '    at Route.dispatch (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\route.js:119:3)\n' +
+      '    at Layer.handle [as handle_request] (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+      '    at C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+      '    at Function.process_params (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+      '    at next (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+      '    at Function.handle (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:175:3)\n' +
+      '    at router (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:47:12)\n' +
+      '    at Layer.handle [as handle_request] (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+      '    at trim_prefix (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:328:13)\n' +
+      '    at C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:286:9\n' +
+      '    at Function.process_params (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+      '    at next (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+      '    at jwtAuth (file:///C:/Users/deepe/OneDrive/Documents/NodeJS_CodingNinja/BW_BILLING_TRACKER/middlewares/jwt.middleware.js:36:9)',
+    timestamp: '2024-05-07T12:54:34.770Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP POST /bandwidth/add',
+  metadata: {
+    meta: {
+      req: {
+        url: '/bandwidth/add',
+        headers: {
+          'content-type': 'application/json',
+          'user-agent': 'PostmanRuntime/7.37.3',
+          accept: '*/*',
+          'postman-token': '17a36219-430a-43f5-891a-617acba27f74',
+          host: 'localhost:8000',
+          'accept-encoding': 'gzip, deflate, br',
+          connection: 'keep-alive',
+          'content-length': '6',
+          cookie: 'connect.sid=s%3AdnMX-jMmMI1YATbm6dYeImJ6VB18qLVA.A8Sws6hRvLD3X%2BV3nVekhY9MJBKIIA6aAyEIVV8Wwt0; token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXIiOiJ0ZXN0dXNlciIsInBhc3N3b3JkIjoiJDJiJDEyJHJkZGQuS0VvSnY1d3l5TGJtZmRKWGVycmFEYjExN3V6SWx0TWNIemJZREdGZUxham0wQ0RlIn0sImlhdCI6MTcxNTA4NjM2OSwiZXhwIjoxNzE1MDg3MjY5fQ.l5mXLonPpir0tQ4_X1pw9jMQl4e1tR2DXtp6ZMqn_1Q'
+        },
+        method: 'POST',
+        httpVersion: '1.1',
+        originalUrl: '/bandwidth/add',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 22
+    },
+    timestamp: '2024-05-07T12:54:34.786Z'
+  }
+}

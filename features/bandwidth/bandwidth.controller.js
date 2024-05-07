@@ -1,6 +1,6 @@
 import path from 'path';
 import BandwidthModel from "./bandwidth.model.js";
-import excelConfig from '../../config/excel.config.js'; // Import excelConfig
+import { defaultLogger } from '../../middlewares/logger.js';
 
 class BandwidthController {
     // Function to update data from Excel
@@ -21,6 +21,7 @@ class BandwidthController {
                 return BandwidthController.fetchLocationData(req, res);
             } catch (error) {
                 console.error('Error updating data:', error);
+                defaultLogger.error('Error updating data:', error)
                 return res.status(500).send('Internal Server Error');
             }
         }
@@ -45,7 +46,8 @@ class BandwidthController {
             return res.render('layout', { userName: req.user, locations: locations, locationData: locationData, selectedLocation: location, messages: req.flash() });
         } catch (error) {
             console.error(`Error fetching data for location ${req.query.location}:`, error);
-            throw error;
+            defaultLogger.error(`Error fetching data for location ${req.query.location}:`, error)
+            return res.status(500).send('Internal Server Error');
         }
     }
 
@@ -61,7 +63,7 @@ class BandwidthController {
             return BandwidthController.fetchLocationData(req, res);
         } catch (error) {
             console.error('Error adding data:', error);
-            req.flash('error', 'Failed to add data');
+            defaultLogger.error('Error adding data:', error)
             return res.status(500).send('Internal Server Error');
         }
     }
@@ -69,11 +71,6 @@ class BandwidthController {
     // Function to download the Excel file
     static async downloadExcel(req, res) {
         try {
-            // Get the file path of the Excel file to download
-            //const filePath = new URL(excelConfig.filePath, import.meta.url).pathname;
-            // const __filename = new URL(import.meta.url).pathname;
-            // const __dirname = path.dirname(__filename)
-            // const filePath = path.join(__dirname + '..', '..', 'python_script','bw_billing_tracker.xlsx');
             const currentDirectory = process.cwd();
 
             const fileLocation = path.join(currentDirectory, 'python_script');
@@ -88,7 +85,8 @@ class BandwidthController {
 
         } catch (error) {
             console.error('Error downloading Excel:', error);
-            res.status(500).send('Internal Server Error');
+            defaultLogger.error('Error downloading Excel:', error)
+            return res.status(500).send('Internal Server Error');
         }
     }
 }
