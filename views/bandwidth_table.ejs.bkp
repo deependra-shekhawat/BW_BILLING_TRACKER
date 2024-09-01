@@ -1,0 +1,283 @@
+<form action="/bandwidth/update" method="POST" id="dataTableForm">
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover table-resizable resizable resizable-table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Month</th>
+          <th scope="col">Project Name</th>
+          <th scope="col">Status</th>
+          <th scope="col">Facility</th>
+          <th scope="col">Tower</th>
+          <th scope="col">BU</th>
+          <th scope="col">Subnet</th>
+          <th scope="col">PAT IP</th>
+          <th scope="col">PIDB</th>
+          <th scope="col">GDCN ID</th>
+          <th scope="col">Partition Name</th>
+          <th scope="col">ISP</th>
+          <th scope="col">Internet Bandwidth (in MB)</th>
+          <th scope="col">WBSe</th>
+          <th scope="col">RFC</th>
+          <th scope="col">Implementation Date</th>
+          <th scope="col">AMT POC</th>
+          <th scope="col">BCP Bandwidth</th>
+          <th scope="col">Comments</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody">
+        <% if(locationData && locationData.length > 0) { %>
+          <% locationData.forEach((item, index) => { %>
+            <tr>
+              <td>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" name="selectedRows[]" id="checkbox<%= index + 2 %>" value="<%= index + 2 %>">
+                  <%= index + 2 %>
+                </div>
+              </td>
+              <td>
+                <select name="month[]" aria-label="month">
+                  <% const months = ['','Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']; %>
+                  <% months.forEach(month => { %>
+                    <option value="<%= month %>" <% if(month === item.Month) { %> selected <% } %>><%= month %></option>
+                  <% }); %>
+                </select>
+              </td>
+              <td>
+                <input type="text" name="projectName[]" placeholder="Project Name" style="width:300px" aria-label="projectName" value="<%= item['Project Name'] %>">
+              </td>
+              <td>
+                <select name="status[]" aria-label="status">
+                  <option value="Live" <% if(item.Status === 'Live') { %> selected <% } %>>Live</option>
+                  <option value="Decommissioned" <% if(item.Status === 'Decommissioned') { %> selected <% } %>>Decommissioned</option>
+                </select>
+              </td>
+              <td>
+                <input type="text" name="facility[]" placeholder="Facility" style="width:100px;" aria-label="facility" value="<%= item.Facility %>">
+              </td>
+              <td>
+                <input type="text" name="tower[]" placeholder="Tower" style="width:40px" aria-label="tower" value="<%= item.Tower %>">
+              </td>
+              <td>
+                <input type="text" name="bu[]" placeholder="BU" style="width:100px" aria-label="bu" value="<%= item.BU %>">
+              </td>
+              <td>
+                <input type="text" name="subnet[]" placeholder="Subnet" style="width:150px" aria-label="subnet" value="<%= item.Subnet %>">
+              </td>
+              <td>
+                <input type="text" name="pat[]" placeholder="PAT IP" style="width:150px" aria-label="pat" value="<%= item['PAT IP'] %>">
+              </td>
+              <td>
+                <input type="text" name="pidb[]" placeholder="PIDB" style="width:100px" aria-label="pidb" value="<%= item.PIDB %>">
+              </td>
+              <td>
+                <input type="text" name="gdcn[]" placeholder="GDCN ID" style="width:100px" aria-label="gdcn" value="<%= item.GDCN %>">
+              </td>
+              <td>
+                <input type="text" name="partition[]" placeholder="Partition Name" style="width:300px" aria-label="partition" value="<%= item['Partition Name'] %>">
+              </td>
+              <td>
+                <input type="text" name="isp[]" placeholder="ISP" style="width:100px" aria-label="isp" value="<%= item.ISP %>">
+              </td>
+              <td>
+                <input type="text" name="bw[]" placeholder="Internet Bandwidth (in MB)" style="width:90px" aria-label="bw" value="<%= item['Internet Bandwidth (in MB)'] %>">
+              </td>
+              <td>
+                <input type="text" name="wbse[]" placeholder="WBSe" style="width:100px" aria-label="wbse" value="<%= item.WBSe %>">
+              </td>
+              <td>
+                <input type="text" name="rfc[]" placeholder="RFC" style="width:100px" aria-label="rfc" value="<%= item.RFC %>">
+              </td>
+              <td>
+                <input type="text" name="implementationDate[]" placeholder="Implementation Date" style="width:100px" aria-label="implementationDate" value="<%= (typeof item['Implementation Date']) == 'number' ? (new Date(item['Implementation Date']).toLocaleDateString()) : (String(item['Implementation Date'])) %>">
+				</td>
+              <td>
+                <input type="text" name="amt[]" placeholder="AMT POC" aria-label="amt" value="<%= item['AMT POC'] %>">
+              </td>
+              <td>
+				  <select name="bcp[]" aria-label="bcp">
+					  <option value="No"
+						  <% if(item['BCP'] && item['BCP'].toString().toLowerCase() === 'no') { %> selected <% } %>>No</option>
+					  <option value="Yes"
+						  <% if(item['BCP'] && item['BCP'].toString().toLowerCase() === 'yes') { %> selected <% } %>>Yes</option>
+				  </select>
+			  </td>
+              <td>
+                <textarea name="comment[]" rows="2" cols="80"><%= item.Comments %></textarea>
+              </td>
+            </tr>
+            
+          <% }); %>
+        <% } else { %>
+          <tr>
+            <td colspan="19">No data available for selected location</td>
+          </tr>
+        <% } %>
+      </tbody>
+      <tfoot>
+        <tr class="bg-secondary bg-gradient fixed-bottom">
+          <td style="width:20vw;">
+            <div class="center1">
+              <button type="button" class="btn btn-success btn-copy" style="width: 90%; font-size: 12px; padding: 2px 0; position: relative;"><i class="bi bi-clipboard"></i>&nbsp;Copy</button>
+            </div>
+          </td>
+          
+          <td style="width:60vw;">
+            <div class="center1">
+              <button type="submit" class="btn btn-primary" style="width: 80%; font-size: 12px; padding: 2px 0; position: relative;">Submit Changes</button>
+            </div>
+          </td>
+          <td style="width:20vw;">
+            <div class="center1">
+            <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn btn-success me-2" style="width: 80%; font-size: 12px; padding: 2px 0; position: relative;">
+              Add Entry
+            </button>
+            </div>
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</form>
+
+<!-- Modal for Adding new entry -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title bold" id="staticBackdropLabel">
+          Add New Entry
+        </h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="addBandwidthForm" action="/bandwidth/add" method="POST" class="row g-3">
+          <div class="col-md-4">
+            <label for="location" >Location:</label>
+            <select id="location" name="location">
+              <% if(selectedLocation) { %>
+                <option class="dropdown-item" value="<%= selectedLocation %>" selected><%= selectedLocation %></option>
+              <% } else{ %>
+                <option class="dropdown-item">Select Location</option>
+              <% } %>
+              <% locations.forEach(location => { %>
+                <option class="dropdown-item" value="<%= location %>"><%= location %></option>
+              <% }); %>
+            </select>
+          </div>
+          
+          <div class="col-md-4">
+            <label for="month">Month:</label>
+            <select name="month" id="month">
+              <% const months = ['','Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']; %>
+              <% months.forEach(month => { %>
+                <option value="<%= month %>"><%= month %></option>
+              <% }); %>
+            </select>
+          </div>
+          
+          <div class="col-md-4">
+            <label for="projectName">Project Name:</label>
+            <input type="text" id="projectName" name="projectName" required>
+          </div>
+          
+          <div class="col-md-4">
+            <label for="status">Status:</label>
+            <select id="status" name="status" required>
+                <option value="Live">Live</option>
+                <option value="Decommissioned">Decommissioned</option>
+            </select>
+          </div>
+          
+          <div class="col-md-4">
+            <label for="facility">Facility:</label>
+            <input type="text" id="facility" name="facility" required>
+          </div>
+          
+          <div class="col-md-4">
+            <label for="tower">Tower:</label>
+            <input type="text" id="tower" name="tower" required>
+          </div>
+          
+          <div class="col-md-4">
+            <label for="bu">BU:</label>
+            <input type="text" id="bu" name="bu" required>
+          </div>
+          
+      
+          <div class="col-md-4">
+            <label for="subnet">Subnet:</label>
+            <input type="text" id="subnet" name="subnet" required>
+          </div>
+          
+          <div class="col-md-4">
+            <label for="pat">PAT IP:</label>
+            <input type="text" id="pat" name="pat" required>
+          </div>
+          
+          <div class="col-md-4">
+            <label for="pidb">PIDB:</label>
+            <input type="text" id="pidb" name="pidb" required>
+          </div>
+          
+          <div class="col-md-4">
+            <label for="gdcn">GDCN ID:</label>
+            <input type="text" id="gdcn" name="gdcn" required>
+          </div>
+          
+          <div class="col-md-4">
+            <label for="partition">Partition Name:</label>
+            <input type="text" id="partition" name="partition" required>
+          </div>
+          
+          <div class="col-md-4">
+            <label for="isp">ISP:</label>
+            <input type="text" id="isp" name="isp">
+          </div>
+          
+          <div class="col-md-4">
+            <label for="bw">Internet Bandwidth (in MB):</label>
+            <input type="number" id="bw" name="bw" style="width: 20%;" required>
+          </div>
+          
+          <div class="col-md-4">
+            <label for="wbse">WBSe:</label>
+            <input type="text" id="wbse" name="wbse" required>
+          </div>
+          
+          <div class="col-md-4">
+            <label for="rfc">RFC:</label>
+            <input type="text" id="rfc" name="rfc" required>
+          </div>
+          
+          <div class="col-md-4">
+            <label for="implementationDate">Implementation Date:</label>
+            <input type="text" id="implementationDate" name="implementationDate" style="width: 40%;" required>
+          </div>
+          
+          <div class="col-md-4">
+            <label for="amt">AMT POC:</label>
+            <input type="text" id="amt" name="amt" required>
+          </div>
+          
+          <div class="col-md-4">
+            <label for="bcp">BCP Bandwidth:</label>
+            <select id="bcp" name="bcp" required>
+              <option value="No">No</option>
+              <option value="Yes">Yes</option>
+            </select>
+          </div>
+          
+          <div class="col-md-4">
+            <label for="comments">Comments:</label><br>
+            <textarea id="comments" name="comments" rows="3" cols="50"></textarea>
+          </div>
+          
+      
+          <button type="submit">Add Bandwidth</button>
+      </form>      
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal for Adding new entry -->

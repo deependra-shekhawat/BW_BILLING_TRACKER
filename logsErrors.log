@@ -51,3 +51,794 @@
     timestamp: '2024-05-07T12:54:34.786Z'
   }
 }
+{
+  level: 'error',
+  message: 'HTTP GET /bandwidth',
+  metadata: {
+    meta: {
+      req: {
+        url: '/bandwidth',
+        headers: {
+          host: 'localhost:8000',
+          connection: 'keep-alive',
+          'cache-control': 'max-age=0',
+          'upgrade-insecure-requests': '1',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36',
+          accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+          'sec-fetch-site': 'same-origin',
+          'sec-fetch-mode': 'navigate',
+          'sec-fetch-user': '?1',
+          'sec-fetch-dest': 'document',
+          'sec-ch-ua': '"Chromium";v="128", "Not;A=Brand";v="24", "Google Chrome";v="128"',
+          'sec-ch-ua-mobile': '?0',
+          'sec-ch-ua-platform': '"Windows"',
+          referer: 'http://localhost:8000/user/signout',
+          'accept-encoding': 'gzip, deflate, br, zstd',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AecF1yHWgngM7_3F1Mta0gn76X47mraHv.nL5bq57o0embkd8xLuYlXM4dJ9558KAKz4aiATxB5oo; token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXIiOiJ0ZXN0dXNlciIsInBhc3N3b3JkIjoiJDJiJDEyJHJkZGQuS0VvSnY1d3l5TGJtZmRKWGVycmFEYjExN3V6SWx0TWNIemJZREdGZUxham0wQ0RlIn0sImlhdCI6MTcyNDk0MzQyNiwiZXhwIjoxNzI0OTQ0MzI2fQ.JbSduqogfpTl9GTafJYn20nTHnr2Oottsyf3wUrMiXo',
+          'if-none-match': 'W/"3549-ttsY45vkZewk2qqjcaSCC19iexs"'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/bandwidth',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 371
+    },
+    timestamp: '2024-08-29T14:57:07.144Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP GET /bandwidth',
+  metadata: {
+    meta: {
+      req: {
+        url: '/bandwidth',
+        headers: {
+          host: 'localhost:8000',
+          connection: 'keep-alive',
+          'cache-control': 'max-age=0',
+          'upgrade-insecure-requests': '1',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36',
+          accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+          'sec-fetch-site': 'same-origin',
+          'sec-fetch-mode': 'navigate',
+          'sec-fetch-user': '?1',
+          'sec-fetch-dest': 'document',
+          'sec-ch-ua': '"Chromium";v="128", "Not;A=Brand";v="24", "Google Chrome";v="128"',
+          'sec-ch-ua-mobile': '?0',
+          'sec-ch-ua-platform': '"Windows"',
+          referer: 'http://localhost:8000/user/signout',
+          'accept-encoding': 'gzip, deflate, br, zstd',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AecF1yHWgngM7_3F1Mta0gn76X47mraHv.nL5bq57o0embkd8xLuYlXM4dJ9558KAKz4aiATxB5oo; token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXIiOiJ0ZXN0dXNlciIsInBhc3N3b3JkIjoiJDJiJDEyJHJkZGQuS0VvSnY1d3l5TGJtZmRKWGVycmFEYjExN3V6SWx0TWNIemJZREdGZUxham0wQ0RlIn0sImlhdCI6MTcyNDk0MzU4MywiZXhwIjoxNzI0OTQ0NDgzfQ.YYCtK10_Af6yz8zvM19eXJHW9Be_zUUt6ekfWoQ53xw'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/bandwidth',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 258
+    },
+    timestamp: '2024-08-29T14:59:43.486Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP GET /bandwidth',
+  metadata: {
+    meta: {
+      req: {
+        url: '/bandwidth',
+        headers: {
+          host: 'localhost:8000',
+          connection: 'keep-alive',
+          'cache-control': 'max-age=0',
+          'upgrade-insecure-requests': '1',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36',
+          accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+          'sec-fetch-site': 'same-origin',
+          'sec-fetch-mode': 'navigate',
+          'sec-fetch-user': '?1',
+          'sec-fetch-dest': 'document',
+          'sec-ch-ua': '"Chromium";v="128", "Not;A=Brand";v="24", "Google Chrome";v="128"',
+          'sec-ch-ua-mobile': '?0',
+          'sec-ch-ua-platform': '"Windows"',
+          referer: 'http://localhost:8000/user/signout',
+          'accept-encoding': 'gzip, deflate, br, zstd',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AzAkyudal_5QnMRv7SbbB4Xf0oOjH_Goy.V2BbgG%2BWxKqmjUzHtqcLBY9rw7OOgXINyD9a4zBUs7g; token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXIiOiJ0ZXN0dXNlciIsInBhc3N3b3JkIjoiJDJiJDEyJHJkZGQuS0VvSnY1d3l5TGJtZmRKWGVycmFEYjExN3V6SWx0TWNIemJZREdGZUxham0wQ0RlIn0sImlhdCI6MTcyNDk0NjcwNCwiZXhwIjoxNzI0OTQ3NjA0fQ.agZ_V1FQuCyiaPMuXYxR9La1CPwGi2TNR1U9BYEgAc4',
+          'if-none-match': 'W/"3629-0XOXoF9XAYafIYUqFerlmORQ0QI"'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/bandwidth',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 294
+    },
+    timestamp: '2024-08-29T15:51:44.809Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP GET /bandwidth',
+  metadata: {
+    meta: {
+      req: {
+        url: '/bandwidth',
+        headers: {
+          host: 'localhost:8000',
+          connection: 'keep-alive',
+          'cache-control': 'max-age=0',
+          'sec-ch-ua': '"Chromium";v="128", "Not;A=Brand";v="24", "Google Chrome";v="128"',
+          'sec-ch-ua-mobile': '?0',
+          'sec-ch-ua-platform': '"Windows"',
+          'upgrade-insecure-requests': '1',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36',
+          accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+          'sec-fetch-site': 'same-origin',
+          'sec-fetch-mode': 'navigate',
+          'sec-fetch-user': '?1',
+          'sec-fetch-dest': 'document',
+          referer: 'http://localhost:8000/user/signout',
+          'accept-encoding': 'gzip, deflate, br, zstd',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AzAkyudal_5QnMRv7SbbB4Xf0oOjH_Goy.V2BbgG%2BWxKqmjUzHtqcLBY9rw7OOgXINyD9a4zBUs7g; token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXIiOiJ0ZXN0dXNlciIsInBhc3N3b3JkIjoiJDJiJDEyJHJkZGQuS0VvSnY1d3l5TGJtZmRKWGVycmFEYjExN3V6SWx0TWNIemJZREdGZUxham0wQ0RlIn0sImlhdCI6MTcyNDk0NjcwNCwiZXhwIjoxNzI0OTQ3NjA0fQ.agZ_V1FQuCyiaPMuXYxR9La1CPwGi2TNR1U9BYEgAc4'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/bandwidth',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 391
+    },
+    timestamp: '2024-08-29T15:53:44.245Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP GET /bandwidth/?location=BDC',
+  metadata: {
+    meta: {
+      req: {
+        url: '/bandwidth/?location=BDC',
+        headers: {
+          host: 'localhost:8000',
+          connection: 'keep-alive',
+          'sec-ch-ua': '"Chromium";v="128", "Not;A=Brand";v="24", "Google Chrome";v="128"',
+          'sec-ch-ua-mobile': '?0',
+          'sec-ch-ua-platform': '"Windows"',
+          'upgrade-insecure-requests': '1',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36',
+          accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+          'sec-fetch-site': 'same-origin',
+          'sec-fetch-mode': 'navigate',
+          'sec-fetch-user': '?1',
+          'sec-fetch-dest': 'document',
+          referer: 'http://localhost:8000/bandwidth',
+          'accept-encoding': 'gzip, deflate, br, zstd',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AzAkyudal_5QnMRv7SbbB4Xf0oOjH_Goy.V2BbgG%2BWxKqmjUzHtqcLBY9rw7OOgXINyD9a4zBUs7g; token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXIiOiJ0ZXN0dXNlciIsInBhc3N3b3JkIjoiJDJiJDEyJHJkZGQuS0VvSnY1d3l5TGJtZmRKWGVycmFEYjExN3V6SWx0TWNIemJZREdGZUxham0wQ0RlIn0sImlhdCI6MTcyNDk0NzAyOCwiZXhwIjoxNzI0OTQ3OTI4fQ.QjODQVKd-m6iqhUl8mgSwGOfzTg5RaZRP_q-K1-kA-0',
+          'if-none-match': 'W/"1112-fQz0z/r7ljaxQLQ0bZxWah/Rnr4"'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/bandwidth/?location=BDC',
+        query: { location: 'BDC' }
+      },
+      res: { statusCode: 500 },
+      responseTime: 459
+    },
+    timestamp: '2024-08-29T15:57:13.158Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP GET /bandwidth/?location=BDC',
+  metadata: {
+    meta: {
+      req: {
+        url: '/bandwidth/?location=BDC',
+        headers: {
+          host: 'localhost:8000',
+          connection: 'keep-alive',
+          'sec-ch-ua': '"Chromium";v="128", "Not;A=Brand";v="24", "Google Chrome";v="128"',
+          'sec-ch-ua-mobile': '?0',
+          'sec-ch-ua-platform': '"Windows"',
+          'upgrade-insecure-requests': '1',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36',
+          accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+          'sec-fetch-site': 'same-origin',
+          'sec-fetch-mode': 'navigate',
+          'sec-fetch-user': '?1',
+          'sec-fetch-dest': 'document',
+          referer: 'http://localhost:8000/bandwidth',
+          'accept-encoding': 'gzip, deflate, br, zstd',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AzAkyudal_5QnMRv7SbbB4Xf0oOjH_Goy.V2BbgG%2BWxKqmjUzHtqcLBY9rw7OOgXINyD9a4zBUs7g; token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXIiOiJ0ZXN0dXNlciIsInBhc3N3b3JkIjoiJDJiJDEyJHJkZGQuS0VvSnY1d3l5TGJtZmRKWGVycmFEYjExN3V6SWx0TWNIemJZREdGZUxham0wQ0RlIn0sImlhdCI6MTcyNDk0NzIyNywiZXhwIjoxNzI0OTQ4MTI3fQ.fqMKee6w3x9D41Ln06dK5jMW3kw-_RSaJlXlLrTVZUw'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/bandwidth/?location=BDC',
+        query: { location: 'BDC' }
+      },
+      res: { statusCode: 500 },
+      responseTime: 405
+    },
+    timestamp: '2024-08-29T16:00:32.227Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP GET /bandwidth/?location=BDC',
+  metadata: {
+    meta: {
+      req: {
+        url: '/bandwidth/?location=BDC',
+        headers: {
+          host: 'localhost:8000',
+          connection: 'keep-alive',
+          'sec-ch-ua': '"Chromium";v="128", "Not;A=Brand";v="24", "Google Chrome";v="128"',
+          'sec-ch-ua-mobile': '?0',
+          'sec-ch-ua-platform': '"Windows"',
+          'upgrade-insecure-requests': '1',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36',
+          accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+          'sec-fetch-site': 'same-origin',
+          'sec-fetch-mode': 'navigate',
+          'sec-fetch-user': '?1',
+          'sec-fetch-dest': 'document',
+          referer: 'http://localhost:8000/bandwidth',
+          'accept-encoding': 'gzip, deflate, br, zstd',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AzAkyudal_5QnMRv7SbbB4Xf0oOjH_Goy.V2BbgG%2BWxKqmjUzHtqcLBY9rw7OOgXINyD9a4zBUs7g; token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXIiOiJ0ZXN0dXNlciIsInBhc3N3b3JkIjoiJDJiJDEyJHJkZGQuS0VvSnY1d3l5TGJtZmRKWGVycmFEYjExN3V6SWx0TWNIemJZREdGZUxham0wQ0RlIn0sImlhdCI6MTcyNDk0NzMzOCwiZXhwIjoxNzI0OTQ4MjM4fQ.HdIjK66TA__3fDh7RmqktL4qm28k-znxl7xpN9oYn8M'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/bandwidth/?location=BDC',
+        query: { location: 'BDC' }
+      },
+      res: { statusCode: 500 },
+      responseTime: 153
+    },
+    timestamp: '2024-08-29T16:02:31.756Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP GET /bandwidth/?location=BDC',
+  metadata: {
+    meta: {
+      req: {
+        url: '/bandwidth/?location=BDC',
+        headers: {
+          host: 'localhost:8000',
+          connection: 'keep-alive',
+          'sec-ch-ua': '"Chromium";v="128", "Not;A=Brand";v="24", "Google Chrome";v="128"',
+          'sec-ch-ua-mobile': '?0',
+          'sec-ch-ua-platform': '"Windows"',
+          'upgrade-insecure-requests': '1',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36',
+          accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+          'sec-fetch-site': 'same-origin',
+          'sec-fetch-mode': 'navigate',
+          'sec-fetch-user': '?1',
+          'sec-fetch-dest': 'document',
+          referer: 'http://localhost:8000/bandwidth',
+          'accept-encoding': 'gzip, deflate, br, zstd',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AzAkyudal_5QnMRv7SbbB4Xf0oOjH_Goy.V2BbgG%2BWxKqmjUzHtqcLBY9rw7OOgXINyD9a4zBUs7g; token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXIiOiJ0ZXN0dXNlciIsInBhc3N3b3JkIjoiJDJiJDEyJHJkZGQuS0VvSnY1d3l5TGJtZmRKWGVycmFEYjExN3V6SWx0TWNIemJZREdGZUxham0wQ0RlIn0sImlhdCI6MTcyNDk0NzMzOCwiZXhwIjoxNzI0OTQ4MjM4fQ.HdIjK66TA__3fDh7RmqktL4qm28k-znxl7xpN9oYn8M'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/bandwidth/?location=BDC',
+        query: { location: 'BDC' }
+      },
+      res: { statusCode: 500 },
+      responseTime: 187
+    },
+    timestamp: '2024-08-29T16:03:58.647Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP GET /bandwidth/?location=BDC',
+  metadata: {
+    meta: {
+      req: {
+        url: '/bandwidth/?location=BDC',
+        headers: {
+          host: 'localhost:8000',
+          connection: 'keep-alive',
+          'cache-control': 'max-age=0',
+          'sec-ch-ua': '"Chromium";v="128", "Not;A=Brand";v="24", "Google Chrome";v="128"',
+          'sec-ch-ua-mobile': '?0',
+          'sec-ch-ua-platform': '"Windows"',
+          'upgrade-insecure-requests': '1',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36',
+          accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+          'sec-fetch-site': 'same-origin',
+          'sec-fetch-mode': 'navigate',
+          'sec-fetch-user': '?1',
+          'sec-fetch-dest': 'document',
+          referer: 'http://localhost:8000/bandwidth',
+          'accept-encoding': 'gzip, deflate, br, zstd',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AzAkyudal_5QnMRv7SbbB4Xf0oOjH_Goy.V2BbgG%2BWxKqmjUzHtqcLBY9rw7OOgXINyD9a4zBUs7g; token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXIiOiJ0ZXN0dXNlciIsInBhc3N3b3JkIjoiJDJiJDEyJHJkZGQuS0VvSnY1d3l5TGJtZmRKWGVycmFEYjExN3V6SWx0TWNIemJZREdGZUxham0wQ0RlIn0sImlhdCI6MTcyNDk0NzMzOCwiZXhwIjoxNzI0OTQ4MjM4fQ.HdIjK66TA__3fDh7RmqktL4qm28k-znxl7xpN9oYn8M'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/bandwidth/?location=BDC',
+        query: { location: 'BDC' }
+      },
+      res: { statusCode: 500 },
+      responseTime: 163
+    },
+    timestamp: '2024-08-29T16:08:58.027Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP GET /bandwidth/?location=BDC',
+  metadata: {
+    meta: {
+      req: {
+        url: '/bandwidth/?location=BDC',
+        headers: {
+          host: 'localhost:8000',
+          connection: 'keep-alive',
+          'cache-control': 'max-age=0',
+          'sec-ch-ua': '"Chromium";v="128", "Not;A=Brand";v="24", "Google Chrome";v="128"',
+          'sec-ch-ua-mobile': '?0',
+          'sec-ch-ua-platform': '"Windows"',
+          'upgrade-insecure-requests': '1',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36',
+          accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+          'sec-fetch-site': 'same-origin',
+          'sec-fetch-mode': 'navigate',
+          'sec-fetch-user': '?1',
+          'sec-fetch-dest': 'document',
+          referer: 'http://localhost:8000/bandwidth',
+          'accept-encoding': 'gzip, deflate, br, zstd',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AzAkyudal_5QnMRv7SbbB4Xf0oOjH_Goy.V2BbgG%2BWxKqmjUzHtqcLBY9rw7OOgXINyD9a4zBUs7g; token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXIiOiJ0ZXN0dXNlciIsInBhc3N3b3JkIjoiJDJiJDEyJHJkZGQuS0VvSnY1d3l5TGJtZmRKWGVycmFEYjExN3V6SWx0TWNIemJZREdGZUxham0wQ0RlIn0sImlhdCI6MTcyNDk1MTQ1NywiZXhwIjoxNzI0OTUyMzU3fQ.H_JkcX-TMl-WVNSN83ws3jgXAVEqPZvftFyK1-dX7HY',
+          'if-none-match': 'W/"d6e12-Xy0URJbFgArMRzMnYArA8Rm5q4A"'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/bandwidth/?location=BDC',
+        query: { location: 'BDC' }
+      },
+      res: { statusCode: 500 },
+      responseTime: 190
+    },
+    timestamp: '2024-08-29T17:12:01.912Z'
+  }
+}
+{
+  level: 'error',
+  message: "Error updating data: Cannot read properties of undefined (reading 'toUpperCase')",
+  metadata: {
+    stack: "TypeError: Cannot read properties of undefined (reading 'toUpperCase')\n" +
+      '    at BandwidthModel.updateExcel (file:///C:/Users/deepe/OneDrive/Documents/NodeJS_CodingNinja/BW_BILLING_TRACKER/features/bandwidth/bandwidth.model.js:41:79)\n' +
+      '    at updateData (file:///C:/Users/deepe/OneDrive/Documents/NodeJS_CodingNinja/BW_BILLING_TRACKER/features/bandwidth/bandwidth.controller.js:19:38)\n' +
+      '    at Layer.handle [as handle_request] (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+      '    at next (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\route.js:149:13)\n' +
+      '    at Route.dispatch (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\route.js:119:3)\n' +
+      '    at Layer.handle [as handle_request] (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+      '    at C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+      '    at Function.process_params (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+      '    at next (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+      '    at Function.handle (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:175:3)\n' +
+      '    at router (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:47:12)\n' +
+      '    at Layer.handle [as handle_request] (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+      '    at trim_prefix (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:328:13)\n' +
+      '    at C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:286:9\n' +
+      '    at Function.process_params (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+      '    at next (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:280:10)',
+    timestamp: '2024-08-29T17:34:39.452Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP POST /bandwidth/update',
+  metadata: {
+    meta: {
+      req: {
+        url: '/bandwidth/update',
+        headers: {
+          host: 'localhost:8000',
+          connection: 'keep-alive',
+          'content-length': '7748',
+          'cache-control': 'max-age=0',
+          'sec-ch-ua': '"Chromium";v="128", "Not;A=Brand";v="24", "Google Chrome";v="128"',
+          'sec-ch-ua-mobile': '?0',
+          'sec-ch-ua-platform': '"Windows"',
+          'upgrade-insecure-requests': '1',
+          origin: 'http://localhost:8000',
+          'content-type': 'application/x-www-form-urlencoded',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36',
+          accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+          'sec-fetch-site': 'same-origin',
+          'sec-fetch-mode': 'navigate',
+          'sec-fetch-user': '?1',
+          'sec-fetch-dest': 'document',
+          referer: 'http://localhost:8000/bandwidth/?location=BDC',
+          'accept-encoding': 'gzip, deflate, br, zstd',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AzAkyudal_5QnMRv7SbbB4Xf0oOjH_Goy.V2BbgG%2BWxKqmjUzHtqcLBY9rw7OOgXINyD9a4zBUs7g; token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoidGVzdHVzZXIiLCJpYXQiOjE3MjQ5NTI4NjcsImV4cCI6MTcyNDk1Mzc2N30.CTRR6Yxi2eckEPU8cm30IHUr3PGer0VNUBWIn6RItDc'
+        },
+        method: 'POST',
+        httpVersion: '1.1',
+        originalUrl: '/bandwidth/update',
+        query: { location: 'BDC' }
+      },
+      res: { statusCode: 500 },
+      responseTime: 186
+    },
+    timestamp: '2024-08-29T17:34:39.455Z'
+  }
+}
+{
+  level: 'error',
+  message: "Error updating data: Cannot read properties of undefined (reading 'toUpperCase')",
+  metadata: {
+    stack: "TypeError: Cannot read properties of undefined (reading 'toUpperCase')\n" +
+      '    at BandwidthModel.updateExcel (file:///C:/Users/deepe/OneDrive/Documents/NodeJS_CodingNinja/BW_BILLING_TRACKER/features/bandwidth/bandwidth.model.js:41:79)\n' +
+      '    at updateData (file:///C:/Users/deepe/OneDrive/Documents/NodeJS_CodingNinja/BW_BILLING_TRACKER/features/bandwidth/bandwidth.controller.js:19:38)\n' +
+      '    at Layer.handle [as handle_request] (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+      '    at next (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\route.js:149:13)\n' +
+      '    at Route.dispatch (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\route.js:119:3)\n' +
+      '    at Layer.handle [as handle_request] (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+      '    at C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+      '    at Function.process_params (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+      '    at next (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+      '    at Function.handle (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:175:3)\n' +
+      '    at router (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:47:12)\n' +
+      '    at Layer.handle [as handle_request] (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+      '    at trim_prefix (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:328:13)\n' +
+      '    at C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:286:9\n' +
+      '    at Function.process_params (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+      '    at next (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:280:10)',
+    timestamp: '2024-08-29T17:35:16.642Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP POST /bandwidth/update',
+  metadata: {
+    meta: {
+      req: {
+        url: '/bandwidth/update',
+        headers: {
+          host: 'localhost:8000',
+          connection: 'keep-alive',
+          'content-length': '7748',
+          'cache-control': 'max-age=0',
+          'sec-ch-ua': '"Chromium";v="128", "Not;A=Brand";v="24", "Google Chrome";v="128"',
+          'sec-ch-ua-mobile': '?0',
+          'sec-ch-ua-platform': '"Windows"',
+          'upgrade-insecure-requests': '1',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36',
+          origin: 'http://localhost:8000',
+          'content-type': 'application/x-www-form-urlencoded',
+          accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+          'sec-fetch-site': 'same-origin',
+          'sec-fetch-mode': 'navigate',
+          'sec-fetch-user': '?1',
+          'sec-fetch-dest': 'document',
+          referer: 'http://localhost:8000/bandwidth/?location=BDC',
+          'accept-encoding': 'gzip, deflate, br, zstd',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AzAkyudal_5QnMRv7SbbB4Xf0oOjH_Goy.V2BbgG%2BWxKqmjUzHtqcLBY9rw7OOgXINyD9a4zBUs7g; token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoidGVzdHVzZXIiLCJpYXQiOjE3MjQ5NTI4NjcsImV4cCI6MTcyNDk1Mzc2N30.CTRR6Yxi2eckEPU8cm30IHUr3PGer0VNUBWIn6RItDc'
+        },
+        method: 'POST',
+        httpVersion: '1.1',
+        originalUrl: '/bandwidth/update',
+        query: { location: 'BDC' }
+      },
+      res: { statusCode: 500 },
+      responseTime: 167
+    },
+    timestamp: '2024-08-29T17:35:16.645Z'
+  }
+}
+{
+  level: 'error',
+  message: "Error updating data: Cannot read properties of undefined (reading 'toUpperCase')",
+  metadata: {
+    stack: "TypeError: Cannot read properties of undefined (reading 'toUpperCase')\n" +
+      '    at BandwidthModel.updateExcel (file:///C:/Users/deepe/OneDrive/Documents/NodeJS_CodingNinja/BW_BILLING_TRACKER/features/bandwidth/bandwidth.model.js:41:79)\n' +
+      '    at updateData (file:///C:/Users/deepe/OneDrive/Documents/NodeJS_CodingNinja/BW_BILLING_TRACKER/features/bandwidth/bandwidth.controller.js:19:38)\n' +
+      '    at Layer.handle [as handle_request] (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+      '    at next (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\route.js:149:13)\n' +
+      '    at Route.dispatch (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\route.js:119:3)\n' +
+      '    at Layer.handle [as handle_request] (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+      '    at C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+      '    at Function.process_params (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+      '    at next (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+      '    at Function.handle (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:175:3)\n' +
+      '    at router (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:47:12)\n' +
+      '    at Layer.handle [as handle_request] (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+      '    at trim_prefix (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:328:13)\n' +
+      '    at C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:286:9\n' +
+      '    at Function.process_params (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+      '    at next (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:280:10)',
+    timestamp: '2024-08-29T17:39:34.042Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP POST /bandwidth/update',
+  metadata: {
+    meta: {
+      req: {
+        url: '/bandwidth/update',
+        headers: {
+          host: 'localhost:8000',
+          connection: 'keep-alive',
+          'content-length': '7745',
+          'cache-control': 'max-age=0',
+          'sec-ch-ua': '"Chromium";v="128", "Not;A=Brand";v="24", "Google Chrome";v="128"',
+          'sec-ch-ua-mobile': '?0',
+          'sec-ch-ua-platform': '"Windows"',
+          'upgrade-insecure-requests': '1',
+          origin: 'http://localhost:8000',
+          'content-type': 'application/x-www-form-urlencoded',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36',
+          accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+          'sec-fetch-site': 'same-origin',
+          'sec-fetch-mode': 'navigate',
+          'sec-fetch-user': '?1',
+          'sec-fetch-dest': 'document',
+          referer: 'http://localhost:8000/bandwidth/?location=BDC',
+          'accept-encoding': 'gzip, deflate, br, zstd',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3AzAkyudal_5QnMRv7SbbB4Xf0oOjH_Goy.V2BbgG%2BWxKqmjUzHtqcLBY9rw7OOgXINyD9a4zBUs7g; token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoidGVzdHVzZXIiLCJpYXQiOjE3MjQ5NTI4NjcsImV4cCI6MTcyNDk1Mzc2N30.CTRR6Yxi2eckEPU8cm30IHUr3PGer0VNUBWIn6RItDc'
+        },
+        method: 'POST',
+        httpVersion: '1.1',
+        originalUrl: '/bandwidth/update',
+        query: { location: 'BDC' }
+      },
+      res: { statusCode: 500 },
+      responseTime: 230
+    },
+    timestamp: '2024-08-29T17:39:34.045Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP GET /bandwidth/?location=BDC',
+  metadata: {
+    meta: {
+      req: {
+        url: '/bandwidth/?location=BDC',
+        headers: {
+          host: 'localhost:8000',
+          connection: 'keep-alive',
+          'sec-ch-ua': '"Chromium";v="128", "Not;A=Brand";v="24", "Google Chrome";v="128"',
+          'sec-ch-ua-mobile': '?0',
+          'sec-ch-ua-platform': '"Windows"',
+          'upgrade-insecure-requests': '1',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36',
+          accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+          'sec-fetch-site': 'same-origin',
+          'sec-fetch-mode': 'navigate',
+          'sec-fetch-user': '?1',
+          'sec-fetch-dest': 'document',
+          referer: 'http://localhost:8000/bandwidth/update',
+          'accept-encoding': 'gzip, deflate, br, zstd',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXIiOiJ0ZXN0dXNlciIsInBhc3N3b3JkIjoiJDJiJDEyJHJkZGQuS0VvSnY1d3l5TGJtZmRKWGVycmFEYjExN3V6SWx0TWNIemJZREdGZUxham0wQ0RlIn0sImlhdCI6MTcyNTA4Njk5NiwiZXhwIjoxNzI1MDg3ODk2fQ.sYIdL2oaRGMX9h2gza51bZ9yTS01b_hHD_mH3DVFHs0; connect.sid=s%3AGKl_G4WQmy2nNzwTlft9xeiAeeU0j5FD.IJdZbyiS%2BPGaiGjY%2Brul9x10lJ83tm8namF29wszHw8',
+          'if-none-match': 'W/"d81ef-567PyMJWHhY4zDy2e++o+n20hpc"'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/bandwidth/?location=BDC',
+        query: { location: 'BDC' }
+      },
+      res: { statusCode: 500 },
+      responseTime: 522
+    },
+    timestamp: '2024-08-31T07:02:33.115Z'
+  }
+}
+{
+  level: 'error',
+  message: 'Error updating data: Sheet with name ADDING not found in Excel file.',
+  metadata: {
+    stack: 'Error: Sheet with name ADDING not found in Excel file.\n' +
+      '    at BandwidthModel.updateExcel (file:///C:/Users/deepe/OneDrive/Documents/NodeJS_CodingNinja/BW_BILLING_TRACKER/features/bandwidth/bandwidth.model.js:28:23)\n' +
+      '    at updateData (file:///C:/Users/deepe/OneDrive/Documents/NodeJS_CodingNinja/BW_BILLING_TRACKER/features/bandwidth/bandwidth.controller.js:27:38)\n' +
+      '    at Layer.handle [as handle_request] (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+      '    at next (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\route.js:149:13)\n' +
+      '    at Route.dispatch (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\route.js:119:3)\n' +
+      '    at Layer.handle [as handle_request] (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+      '    at C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+      '    at Function.process_params (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+      '    at next (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+      '    at Function.handle (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:175:3)\n' +
+      '    at router (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:47:12)\n' +
+      '    at Layer.handle [as handle_request] (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+      '    at trim_prefix (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:328:13)\n' +
+      '    at C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:286:9\n' +
+      '    at Function.process_params (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+      '    at next (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:280:10)',
+    timestamp: '2024-08-31T08:34:44.120Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP POST /bandwidth/update',
+  metadata: {
+    meta: {
+      req: {
+        url: '/bandwidth/update',
+        headers: {
+          host: 'localhost:8000',
+          connection: 'keep-alive',
+          'content-length': '762',
+          'cache-control': 'max-age=0',
+          'sec-ch-ua': '"Chromium";v="128", "Not;A=Brand";v="24", "Google Chrome";v="128"',
+          'sec-ch-ua-mobile': '?0',
+          'sec-ch-ua-platform': '"Windows"',
+          'upgrade-insecure-requests': '1',
+          origin: 'http://localhost:8000',
+          'content-type': 'application/x-www-form-urlencoded',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36',
+          accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+          'sec-fetch-site': 'same-origin',
+          'sec-fetch-mode': 'navigate',
+          'sec-fetch-user': '?1',
+          'sec-fetch-dest': 'document',
+          referer: 'http://localhost:8000/bandwidth/add',
+          'accept-encoding': 'gzip, deflate, br, zstd',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXIiOiJ0ZXN0dXNlciIsInBhc3N3b3JkIjoiJDJiJDEyJHJkZGQuS0VvSnY1d3l5TGJtZmRKWGVycmFEYjExN3V6SWx0TWNIemJZREdGZUxham0wQ0RlIn0sImlhdCI6MTcyNTA5MzA3NSwiZXhwIjoxNzI1MDkzOTc1fQ.vo-nqmN-bqVeFdZ6ZYh1vYdBK1WmrZ-SHtp38jsAlB0; connect.sid=s%3A7VlOc5HwZSE42z8HQU9SGv1MM5N40o32.47sKCdcQElVEUtbnOXENbJSYbG%2Fl7rMgyfg0xemxvV4'
+        },
+        method: 'POST',
+        httpVersion: '1.1',
+        originalUrl: '/bandwidth/update',
+        query: { location: 'ADDING' }
+      },
+      res: { statusCode: 500 },
+      responseTime: 220
+    },
+    timestamp: '2024-08-31T08:34:44.123Z'
+  }
+}
+{
+  level: 'error',
+  message: 'Error updating data: Sheet with name ADDING not found in Excel file.',
+  metadata: {
+    stack: 'Error: Sheet with name ADDING not found in Excel file.\n' +
+      '    at BandwidthModel.updateExcel (file:///C:/Users/deepe/OneDrive/Documents/NodeJS_CodingNinja/BW_BILLING_TRACKER/features/bandwidth/bandwidth.model.js:28:23)\n' +
+      '    at updateData (file:///C:/Users/deepe/OneDrive/Documents/NodeJS_CodingNinja/BW_BILLING_TRACKER/features/bandwidth/bandwidth.controller.js:27:38)\n' +
+      '    at Layer.handle [as handle_request] (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+      '    at next (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\route.js:149:13)\n' +
+      '    at Route.dispatch (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\route.js:119:3)\n' +
+      '    at Layer.handle [as handle_request] (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+      '    at C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+      '    at Function.process_params (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+      '    at next (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+      '    at Function.handle (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:175:3)\n' +
+      '    at router (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:47:12)\n' +
+      '    at Layer.handle [as handle_request] (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+      '    at trim_prefix (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:328:13)\n' +
+      '    at C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:286:9\n' +
+      '    at Function.process_params (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+      '    at next (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:280:10)',
+    timestamp: '2024-08-31T08:35:20.082Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP POST /bandwidth/update',
+  metadata: {
+    meta: {
+      req: {
+        url: '/bandwidth/update',
+        headers: {
+          host: 'localhost:8000',
+          connection: 'keep-alive',
+          'content-length': '760',
+          'cache-control': 'max-age=0',
+          'sec-ch-ua': '"Chromium";v="128", "Not;A=Brand";v="24", "Google Chrome";v="128"',
+          'sec-ch-ua-mobile': '?0',
+          'sec-ch-ua-platform': '"Windows"',
+          'upgrade-insecure-requests': '1',
+          origin: 'http://localhost:8000',
+          'content-type': 'application/x-www-form-urlencoded',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36',
+          accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+          'sec-fetch-site': 'same-origin',
+          'sec-fetch-mode': 'navigate',
+          'sec-fetch-user': '?1',
+          'sec-fetch-dest': 'document',
+          referer: 'http://localhost:8000/bandwidth/add',
+          'accept-encoding': 'gzip, deflate, br, zstd',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXIiOiJ0ZXN0dXNlciIsInBhc3N3b3JkIjoiJDJiJDEyJHJkZGQuS0VvSnY1d3l5TGJtZmRKWGVycmFEYjExN3V6SWx0TWNIemJZREdGZUxham0wQ0RlIn0sImlhdCI6MTcyNTA5MzA3NSwiZXhwIjoxNzI1MDkzOTc1fQ.vo-nqmN-bqVeFdZ6ZYh1vYdBK1WmrZ-SHtp38jsAlB0; connect.sid=s%3A7VlOc5HwZSE42z8HQU9SGv1MM5N40o32.47sKCdcQElVEUtbnOXENbJSYbG%2Fl7rMgyfg0xemxvV4'
+        },
+        method: 'POST',
+        httpVersion: '1.1',
+        originalUrl: '/bandwidth/update',
+        query: { location: 'ADDING' }
+      },
+      res: { statusCode: 500 },
+      responseTime: 202
+    },
+    timestamp: '2024-08-31T08:35:20.085Z'
+  }
+}
+{
+  level: 'error',
+  message: 'Error updating data: Sheet with name ADDING not found in Excel file.',
+  metadata: {
+    stack: 'Error: Sheet with name ADDING not found in Excel file.\n' +
+      '    at BandwidthModel.updateExcel (file:///C:/Users/deepe/OneDrive/Documents/NodeJS_CodingNinja/BW_BILLING_TRACKER/features/bandwidth/bandwidth.model.js:28:23)\n' +
+      '    at updateData (file:///C:/Users/deepe/OneDrive/Documents/NodeJS_CodingNinja/BW_BILLING_TRACKER/features/bandwidth/bandwidth.controller.js:27:38)\n' +
+      '    at Layer.handle [as handle_request] (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+      '    at next (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\route.js:149:13)\n' +
+      '    at Route.dispatch (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\route.js:119:3)\n' +
+      '    at Layer.handle [as handle_request] (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+      '    at C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+      '    at Function.process_params (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+      '    at next (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+      '    at Function.handle (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:175:3)\n' +
+      '    at router (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:47:12)\n' +
+      '    at Layer.handle [as handle_request] (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+      '    at trim_prefix (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:328:13)\n' +
+      '    at C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:286:9\n' +
+      '    at Function.process_params (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+      '    at next (C:\\Users\\deepe\\OneDrive\\Documents\\NodeJS_CodingNinja\\BW_BILLING_TRACKER\\node_modules\\express\\lib\\router\\index.js:280:10)',
+    timestamp: '2024-08-31T08:42:19.077Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP POST /bandwidth/update',
+  metadata: {
+    meta: {
+      req: {
+        url: '/bandwidth/update',
+        headers: {
+          host: 'localhost:8000',
+          connection: 'keep-alive',
+          'content-length': '789',
+          'cache-control': 'max-age=0',
+          'sec-ch-ua': '"Chromium";v="128", "Not;A=Brand";v="24", "Google Chrome";v="128"',
+          'sec-ch-ua-mobile': '?0',
+          'sec-ch-ua-platform': '"Windows"',
+          'upgrade-insecure-requests': '1',
+          origin: 'http://localhost:8000',
+          'content-type': 'application/x-www-form-urlencoded',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36',
+          accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+          'sec-fetch-site': 'same-origin',
+          'sec-fetch-mode': 'navigate',
+          'sec-fetch-user': '?1',
+          'sec-fetch-dest': 'document',
+          referer: 'http://localhost:8000/bandwidth/?location=BDC',
+          'accept-encoding': 'gzip, deflate, br, zstd',
+          'accept-language': 'en-US,en;q=0.9',
+          cookie: 'connect.sid=s%3A9_4B2ZJEkOlXRXiRsWaNNMC24v01wMtU.ymnyNkz%2B2shPiGH6GGW%2Beyy6GJYq6%2FbGZRBqINIk9Mg; token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXIiOiJ0ZXN0dXNlciIsInBhc3N3b3JkIjoiJDJiJDEyJHJkZGQuS0VvSnY1d3l5TGJtZmRKWGVycmFEYjExN3V6SWx0TWNIemJZREdGZUxham0wQ0RlIn0sImlhdCI6MTcyNTA5MzY3MCwiZXhwIjoxNzI1MDk0NTcwfQ.b83hOQnNgiIkhSV04CiIZ4vIzZOUMmtNVaCMXeARQcY'
+        },
+        method: 'POST',
+        httpVersion: '1.1',
+        originalUrl: '/bandwidth/update',
+        query: { location: 'ADDING' }
+      },
+      res: { statusCode: 500 },
+      responseTime: 169
+    },
+    timestamp: '2024-08-31T08:42:19.086Z'
+  }
+}

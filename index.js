@@ -17,9 +17,9 @@ const server = express();
 // Load all the environment variables in the application
 dotenv.config();
 
-server.use(express.json()); // Initialize json middleware
+server.use(express.json({limit: '1000mb'})); // Initialize json middleware
 server.use(cookieParser()); // Initialize cookie-parser middleware
-server.use(express.urlencoded({ extended: true }));
+server.use(express.urlencoded({ extended: true,  limit: '1000mb', parameterLimit: 10000000000}));
 server.use(express.static('public'));
 
 // Set up session middleware

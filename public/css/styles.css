@@ -21,3 +21,8 @@ table select, table input {
     font-size: 0.80rem;
     margin-top: 0.4em;
 }
+
+.table-responsive {
+  height: calc(100vh-95px) !important;
+  overflow: auto;
+}
